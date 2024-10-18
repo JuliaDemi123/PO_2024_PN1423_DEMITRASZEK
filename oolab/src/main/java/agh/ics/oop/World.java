@@ -1,21 +1,24 @@
 package agh.ics.oop;
+import agh.ics.oop.model.MoveDirection;
 
 public class World {
-    public static void run(String[] messages)
+    public static void run(MoveDirection[] direction)
     {
-        System.out.println("Zwierzak idzie do przodu");
-        for (String msg : messages) {
-            switch (msg) {
-                case "f" -> System.out.println("zwierzak idzie do przodu");
-                case "b" -> System.out.println("zwierzak idzie do tylu");
-                case "r" -> System.out.println("zwierzak idzie na prawo");
-                case "l" -> System.out.println("zwierzak idzie na lewo");
-            };
+        System.out.println("start");
+        for (MoveDirection dir: direction) {
+            if (dir != null)
+            {
+                switch (dir) {
+                    case dir.FORWARD -> System.out.println("zwierzak idzie do przodu");
+                    case dir.BACKWARD -> System.out.println("zwierzak idzie do tylu");
+                    case dir.RIGHT -> System.out.println("zwierzak skreca w prawo");
+                    case dir.LEFT -> System.out.println("zwierzak skreca w lewo");
+                };
+            }
         }
+        System.out.println("stop");
     }
     public static void main(String[] args) {
-        System.out.println("system wystartowal");
-        run(args);
-        System.out.println("system zakonczyl dzialanie");
+        run(OptionsParser.getDirections(args));
     }
 }
