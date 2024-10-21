@@ -60,10 +60,14 @@ public class Vector2d {
     {
         return new Vector2d(-other.x, -other.y);
     }
-    public boolean equals(Object other) // Zastanów się, jaką inną metodę trzeba dodać po zdefiniowaniu własnego equals.
+
+    @Override
+    public boolean equals(Object other)
     {
         return (other instanceof Vector2d) && hashCode() == other.hashCode();
     }
+
+    @Override
     public int hashCode()
     {
         return Objects.hash(x, y);
