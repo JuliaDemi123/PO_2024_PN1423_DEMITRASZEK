@@ -5,14 +5,14 @@ public class World {
     public static void run(MoveDirection[] direction)
     {
         System.out.println("start");
-        for (MoveDirection dir: direction) {
+        for (MoveDirection dir : direction) {
             if (dir != null)
             {
                 switch (dir) {
-                    case dir.FORWARD -> System.out.println("zwierzak idzie do przodu");
-                    case dir.BACKWARD -> System.out.println("zwierzak idzie do tylu");
-                    case dir.RIGHT -> System.out.println("zwierzak skreca w prawo");
-                    case dir.LEFT -> System.out.println("zwierzak skreca w lewo");
+                    case FORWARD -> System.out.println("zwierzak idzie do przodu");
+                    case BACKWARD -> System.out.println("zwierzak idzie do tylu");
+                    case RIGHT -> System.out.println("zwierzak skreca w prawo");
+                    case LEFT -> System.out.println("zwierzak skreca w lewo");
                 };
             }
         }

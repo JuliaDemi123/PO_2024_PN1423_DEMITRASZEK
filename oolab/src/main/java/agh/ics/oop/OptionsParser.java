@@ -1,5 +1,7 @@
 package agh.ics.oop;
 
+import java.util.Arrays;
+
 import agh.ics.oop.model.MoveDirection;
 
 public class OptionsParser {
@@ -17,6 +19,6 @@ public class OptionsParser {
                 case "l" -> {movement[ind] = MoveDirection.LEFT; ind++;}
             }
         }
-        return movement;
+        return Arrays.copyOf(movement, ind);
     }
 }
