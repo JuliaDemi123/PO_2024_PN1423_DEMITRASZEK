@@ -29,11 +29,11 @@ public class Vector2d {
 
     public boolean precedes(Vector2d other)
     {
-        return (x <= other.x && y <= other.y) ? true : false;
+        return x <= other.x && y <= other.y;
     }
     public boolean follows(Vector2d other)
     {
-        return (x >= other.x && y >= other.y) ? true : false;
+        return x >= other.x && y >= other.y;
     }
 
     public Vector2d add(Vector2d other)
