@@ -22,10 +22,12 @@ public class Vector2d {
         return y;
     }
 
+
+    @Override
     public String toString()
-    {
+     {
         return "(" + x + ", " + y + ")";
-    }
+     }
 
     public boolean precedes(Vector2d other)
     {
@@ -62,14 +64,14 @@ public class Vector2d {
     }
 
     @Override
-    public boolean equals(Object other)
-    {
-        return (other instanceof Vector2d) && hashCode() == other.hashCode();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vector2d vector2d)) return false;
+        return x == vector2d.x && y == vector2d.y;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return Objects.hash(x, y);
     }
 }
