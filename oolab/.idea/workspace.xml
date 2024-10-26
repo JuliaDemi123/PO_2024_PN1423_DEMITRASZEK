@@ -12,7 +12,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/MapDirectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/MapDirectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,6 +64,18 @@
     "Gradle.MapDirectionTest.testNext.executor": "Run",
     "Gradle.MapDirectionTest.testPrevious.executor": "Run",
     "Gradle.Vector2dTest.equalsTest.executor": "Run",
+    "Gradle.Vector2dTest.executor": "Run",
+    "Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.getTheUpperRightOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.isEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isNotEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringCorrect.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringNotInIncorrectFormat.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorFollowsTheOther.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.vectorsAddingIsCorrect.executor": "Run",
     "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Run",
     "Gradle.untitled [:agh.ics.oop.World.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -80,8 +103,8 @@
       <recent name="agh.ics.oop.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MapDirectionTest">
-    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Vector2dTest.vectorsAddingIsCorrect">
+    <configuration name="Vector2dTest.getTheLowerLeftOfTwoVectors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +117,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest.getTheLowerLeftOfTwoVectors&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -105,7 +128,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest.previousDirectionOfEastIsNorth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Vector2dTest.getTheUpperRightOfTwoVectors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -118,7 +141,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfEastIsNorth&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest.getTheUpperRightOfTwoVectors&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +152,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest.previousDirectionOfNorthIsWest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Vector2dTest.oneVectorDoesNotFollowTheOther" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +165,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfNorthIsWest&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest.oneVectorDoesNotFollowTheOther&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +176,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest.previousDirectionOfWestIsSouth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Vector2dTest.oneVectorFollowsTheOther" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfWestIsSouth&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest.oneVectorFollowsTheOther&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,7 +200,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest.equalsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Vector2dTest.vectorsAddingIsCorrect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +213,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;Vector2dTest.equalsTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest.vectorsAddingIsCorrect&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MapDirectionTest" />
-        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfEastIsNorth" />
-        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfNorthIsWest" />
-        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfWestIsSouth" />
-        <item itemvalue="Gradle.Vector2dTest.equalsTest" />
+        <item itemvalue="Gradle.Vector2dTest.vectorsAddingIsCorrect" />
+        <item itemvalue="Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors" />
+        <item itemvalue="Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther" />
+        <item itemvalue="Gradle.Vector2dTest.getTheUpperRightOfTwoVectors" />
+        <item itemvalue="Gradle.Vector2dTest.oneVectorFollowsTheOther" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +266,7 @@
       <workItem from="1729513746065" duration="414000" />
       <workItem from="1729514226674" duration="6703000" />
       <workItem from="1729881362209" duration="15000" />
-      <workItem from="1729927008168" duration="3326000" />
+      <workItem from="1729927008168" duration="7488000" />
     </task>
     <servers />
   </component>
