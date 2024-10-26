@@ -212,5 +212,4 @@ class Vector2dTest
         assertNotEquals(v3.opposite(),new Vector2d(-19343,5));
     }
 
-
 }
