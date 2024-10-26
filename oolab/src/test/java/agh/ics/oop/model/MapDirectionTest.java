@@ -11,10 +11,9 @@ class MapDirectionTest
         // given
         MapDirection map = MapDirection.NORTH;
 
-        // then
+        // when and then
         assertEquals(map.previous(), MapDirection.WEST);
 
-        //and
         assertNotEquals(map.previous(), MapDirection.NORTH);
         assertNotEquals(map.previous(), MapDirection.EAST);
         assertNotEquals(map.previous(), MapDirection.SOUTH);
@@ -26,10 +25,9 @@ class MapDirectionTest
         //given
         MapDirection map = MapDirection.EAST;
 
-        //then
+        //when and then
         assertEquals(map.previous(), MapDirection.NORTH);
 
-        //and
         assertNotEquals(map.previous(), MapDirection.EAST);
         assertNotEquals(map.previous(), MapDirection.WEST);
         assertNotEquals(map.previous(), MapDirection.SOUTH);
@@ -41,10 +39,9 @@ class MapDirectionTest
         //given
         MapDirection map = MapDirection.SOUTH;
 
-        //then
+        //when and then
         assertEquals(map.previous(), MapDirection.EAST);
 
-        //and
         assertNotEquals(map.previous(), MapDirection.SOUTH);
         assertNotEquals(map.previous(), MapDirection.NORTH);
         assertNotEquals(map.previous(), MapDirection.WEST);
@@ -56,14 +53,65 @@ class MapDirectionTest
         //given
         MapDirection map = MapDirection.WEST;
 
-        //then
+        //when and then
         assertEquals(map.previous(), MapDirection.SOUTH);
 
-        //and
         assertNotEquals(map.previous(), MapDirection.NORTH);
         assertNotEquals(map.previous(), MapDirection.EAST);
         assertNotEquals(map.previous(), MapDirection.WEST);
     }
 
+    @Test
+    void nextDirectionOfNorthIsEast()
+    {
+        //given
+        MapDirection map = MapDirection.NORTH;
+
+        //when and then
+        assertEquals(map.next(), MapDirection.EAST);
+
+        assertNotEquals(map.next(), MapDirection.NORTH);
+        assertNotEquals(map.next(), MapDirection.SOUTH);
+        assertNotEquals(map.next(), MapDirection.WEST);
+    }
+
+    @Test
+    void nextDirectionOfEastIsSouth()
+    {
+        //given
+        MapDirection map = MapDirection.EAST;
+
+        //when and then
+        assertEquals(map.next(), MapDirection.SOUTH);
+
+        assertNotEquals(map.next(), MapDirection.NORTH);
+        assertNotEquals(map.next(), MapDirection.EAST);
+        assertNotEquals(map.next(), MapDirection.WEST);
+
+    }
+
+    @Test
+    void nextDirectionOfSouthIsWest()
+    {
+        MapDirection map = MapDirection.SOUTH;
+
+        assertEquals(map.next(), MapDirection.WEST);
+
+        assertNotEquals(map.next(), MapDirection.NORTH);
+        assertNotEquals(map.next(), MapDirection.EAST);
+        assertNotEquals(map.next(), MapDirection.SOUTH);
+    }
+
+    @Test
+    void nextDirectionOfWestIfNorth()
+    {
+        MapDirection map = MapDirection.WEST;
+
+        assertEquals(map.next(), MapDirection.NORTH);
+
+        assertNotEquals(map.next(), MapDirection.WEST);
+        assertNotEquals(map.next(), MapDirection.EAST);
+        assertNotEquals(map.next(), MapDirection.SOUTH);
+    }
 
 }
