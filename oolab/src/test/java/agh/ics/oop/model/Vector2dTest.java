@@ -158,7 +158,7 @@ class Vector2dTest
     }
 
     @Test
-    void vectorsAddingIsCorrect()
+    void addingVectorToAnotherVector()
     {
         Vector2d v1 = new Vector2d(1,2);
         Vector2d v2 = new Vector2d(40,2);
@@ -168,6 +168,48 @@ class Vector2dTest
         assertEquals(v2.add(v3),new Vector2d(-19303,7));
         assertEquals(v1.add(v3),new Vector2d(-19342,7));
         assertEquals(v2.add(new Vector2d(0,0)),new Vector2d(40,2));
+    }
+
+    @Test
+    void subtractingVectorFromAnotherVector()
+    {
+        Vector2d v1 = new Vector2d(1,2);
+        Vector2d v2 = new Vector2d(40,2);
+        Vector2d v3 = new Vector2d(-19343,5);
+
+
+        assertEquals(v1.subtract(v2),new Vector2d(-39,0));
+        assertEquals(v1,v1.subtract(new Vector2d(0,0)));
+        assertEquals(v1.subtract(v3),new Vector2d(19344,-3));
+        assertEquals(v3.subtract(v2),new Vector2d(-19383,3));
+    }
+
+    @Test
+    void doesOppositeOfVectorHaveBothNegatedCoordinates()
+    {
+        Vector2d v1 = new Vector2d(1,2);
+        Vector2d v2 = new Vector2d(40,2);
+        Vector2d v3 = new Vector2d(-19343,5);
+        Vector2d v4 = new Vector2d(-256,-39);
+        Vector2d v5 = new Vector2d(0,0);
+
+        assertEquals(v1.opposite(),new Vector2d(-1,-2));
+        assertEquals(v2.opposite(),new Vector2d(-40,-2));
+        assertEquals(v3.opposite(),new Vector2d(19343,-5));
+        assertEquals(v4.opposite(),new Vector2d(256,39));
+        assertEquals(v5.opposite(),new Vector2d(0,0));
+    }
+
+    @Test
+    void doesOppositeOfVectorNotSwitchOneOrZeroCoordinates()
+    {
+        Vector2d v1 = new Vector2d(1,10);
+        Vector2d v2 = new Vector2d(30,26);
+        Vector2d v3 = new Vector2d(-19343,5);
+
+        assertNotEquals(v1.opposite(),new Vector2d(1,-10));
+        assertNotEquals(v2.opposite(),new Vector2d(-30,26));
+        assertNotEquals(v3.opposite(),new Vector2d(-19343,5));
     }
 
 
