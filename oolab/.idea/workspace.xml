@@ -11,10 +11,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Vector2dTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Vector2dTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -45,30 +44,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.MapDirectionTest.testNext.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.testPrevious.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.equalsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.oolab [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.untitled [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.MapDirectionTest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfWestIsSouth.executor": "Run",
+    "Gradle.MapDirectionTest.testNext.executor": "Run",
+    "Gradle.MapDirectionTest.testPrevious.executor": "Run",
+    "Gradle.Vector2dTest.equalsTest.executor": "Run",
+    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Run",
+    "Gradle.untitled [:agh.ics.oop.World.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "lab2",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.Vector2dTest.equalsTest">
-    <configuration name="MapDirectionTest.testNext" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="agh.ics.oop.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.MapDirectionTest">
+    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -81,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MapDirectionTest.testNext&quot;" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -92,7 +105,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest.testPrevious" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MapDirectionTest.previousDirectionOfEastIsNorth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -105,7 +118,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;MapDirectionTest.testPrevious&quot;" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfEastIsNorth&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapDirectionTest.previousDirectionOfNorthIsWest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfNorthIsWest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapDirectionTest.previousDirectionOfWestIsSouth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest.previousDirectionOfWestIsSouth&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,9 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MapDirectionTest" />
+        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfEastIsNorth" />
+        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfNorthIsWest" />
+        <item itemvalue="Gradle.MapDirectionTest.previousDirectionOfWestIsSouth" />
         <item itemvalue="Gradle.Vector2dTest.equalsTest" />
-        <item itemvalue="Gradle.MapDirectionTest.testPrevious" />
-        <item itemvalue="Gradle.MapDirectionTest.testNext" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +243,7 @@
       <workItem from="1729513746065" duration="414000" />
       <workItem from="1729514226674" duration="6703000" />
       <workItem from="1729881362209" duration="15000" />
-      <workItem from="1729927008168" duration="1108000" />
+      <workItem from="1729927008168" duration="2394000" />
     </task>
     <servers />
   </component>
