@@ -1,8 +1,9 @@
 package agh.ics.oop;
 
+import java.util.Arrays;
+
 import agh.ics.oop.model.MoveDirection;
 
-import java.util.Arrays;
 
 public class OptionsParser {
     public static MoveDirection[] getDirections(String[] directions)
@@ -22,3 +23,4 @@ public class OptionsParser {
         return Arrays.copyOf(movement, ind);
     }
 }
+

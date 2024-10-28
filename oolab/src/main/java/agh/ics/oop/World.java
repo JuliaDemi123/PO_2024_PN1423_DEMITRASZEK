@@ -7,7 +7,7 @@ public class World {
     public static void run(MoveDirection[] direction)
     {
         System.out.println("start");
-        for (MoveDirection dir: direction) {
+        for (MoveDirection dir : direction) {
             if (dir != null)
             {
                 switch (dir) {
