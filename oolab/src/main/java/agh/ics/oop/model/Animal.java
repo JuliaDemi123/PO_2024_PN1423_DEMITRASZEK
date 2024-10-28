@@ -60,17 +60,16 @@ public class Animal
                 };
                 break;
             case FORWARD:
-                position = newCoordinates(orientation);
+                position = newCoordinates( position.add(orientation.toUnitVector()) );
                 break;
             case BACKWARD:
-                position = newCoordinates(orientation);
+                position = newCoordinates( position.add(orientation.toUnitVector().opposite()) );
                 break;
         }
     }
 
-     private Vector2d newCoordinates(MapDirection direction)
+     private Vector2d newCoordinates(Vector2d newCoords)
     {
-        Vector2d newCoords = position.add(direction.toUnitVector());
         return new Vector2d( Math.max(0,Math.min(newCoords.getX(),4)), Math.max(0,Math.min(newCoords.getY(),4)));
     }
 

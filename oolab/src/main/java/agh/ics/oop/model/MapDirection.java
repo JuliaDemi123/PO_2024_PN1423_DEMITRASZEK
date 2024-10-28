@@ -8,8 +8,8 @@ public enum MapDirection {
     EAST;
     private static final Vector2d VectorNorth = new Vector2d(0,1);
     private static final Vector2d VectorSouth = new Vector2d(0,-1);
-    private static final Vector2d VectorWest = new Vector2d(1,0);
-    private static final Vector2d VectorEast = new Vector2d(-1,0);
+    private static final Vector2d VectorWest = new Vector2d(-1,0);
+    private static final Vector2d VectorEast = new Vector2d(1,0);
     public String toString()
     {
         return switch (this) {

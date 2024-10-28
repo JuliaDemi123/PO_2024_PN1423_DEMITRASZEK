@@ -21,8 +21,8 @@ class OptionsParserTest
         String[] dir2 = new String[] {"f","l","b","r","l"};
 
         //when
-        List<MoveDirection> arr1 = getDirections(dir1);
-        List<MoveDirection> arr2 = getDirections(dir2);
+        List<MoveDirection> arr1 = parse(dir1);
+        List<MoveDirection> arr2 = parse(dir2);
 
         //then
         Assertions.assertIterableEquals(arr1,Arrays.asList(MoveDirection.RIGHT,MoveDirection.BACKWARD,MoveDirection.FORWARD,MoveDirection.FORWARD,MoveDirection.BACKWARD));
@@ -36,9 +36,9 @@ class OptionsParserTest
         String[] dir2 = new String[] {"a","c","hello","apple","orange"};
         String[] dir3 = new String[] {};
 
-        List<MoveDirection> arr1 = getDirections(dir1);
-        List<MoveDirection> arr2 = getDirections(dir2);
-        List<MoveDirection> arr3 = getDirections(dir3);
+        List<MoveDirection> arr1 = parse(dir1);
+        List<MoveDirection> arr2 = parse(dir2);
+        List<MoveDirection> arr3 = parse(dir3);
 
 
         Assertions.assertIterableEquals(arr1,Arrays.asList(MoveDirection.FORWARD,MoveDirection.FORWARD,MoveDirection.LEFT,MoveDirection.BACKWARD,MoveDirection.RIGHT));
