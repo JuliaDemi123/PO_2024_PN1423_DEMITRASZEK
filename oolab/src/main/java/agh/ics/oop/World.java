@@ -1,5 +1,7 @@
 package agh.ics.oop;
 import agh.ics.oop.model.MoveDirection;
+import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.MapDirection;
 
 public class World {
     public static void run(MoveDirection[] direction)
@@ -18,7 +20,7 @@ public class World {
         }
         System.out.println("stop");
     }
-    public static void main(String[] args) {
-        run(OptionsParser.getDirections(args));
+    public static void main(String[] args)
+    {
     }
 }

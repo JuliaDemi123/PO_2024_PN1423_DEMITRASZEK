@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import agh.ics.oop.model.MoveDirection;
 
+
 public class OptionsParser {
     public static MoveDirection[] getDirections(String[] directions)
     {
@@ -22,3 +23,4 @@ public class OptionsParser {
         return Arrays.copyOf(movement, ind);
     }
 }
+
