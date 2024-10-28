@@ -13,9 +13,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionsParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionsParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,7 @@
       <recent name="agh.ics.oop.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.OptionsParserTest">
     <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -249,10 +249,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.OptionsParserTest" />
+        <item itemvalue="Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray" />
         <item itemvalue="Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray" />
         <item itemvalue="Gradle.MapDirectionTest" />
         <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray" />
       </list>
     </recent_temporary>
   </component>

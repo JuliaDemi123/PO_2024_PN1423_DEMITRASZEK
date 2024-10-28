@@ -42,7 +42,7 @@ public class Animal
         switch (direction)
         {
             case RIGHT:
-                this.orientation = switch (this.orientation)
+                orientation = switch (orientation)
                 {
                     case NORTH -> MapDirection.EAST;
                     case SOUTH -> MapDirection.WEST;
@@ -51,7 +51,7 @@ public class Animal
                 };
                 break;
             case LEFT:
-                this.orientation = switch (this.orientation)
+                orientation = switch (orientation)
                 {
                     case NORTH -> MapDirection.WEST;
                     case SOUTH -> MapDirection.EAST;
@@ -60,10 +60,10 @@ public class Animal
                 };
                 break;
             case FORWARD:
-                position = newCoordinates(this.orientation);
+                position = newCoordinates(orientation);
                 break;
             case BACKWARD:
-                position = newCoordinates(this.orientation);
+                position = newCoordinates(orientation);
                 break;
         }
     }
