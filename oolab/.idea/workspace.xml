@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,52 +47,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.MapDirectionTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfWestIsSouth.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.testNext.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.testPrevious.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.doesOppositeOfVectorHaveBothNegatedCoordinates.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.doesOppositeOfVectorNotSwitchOneOrZeroCoordinates.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.equalsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.getTheUpperRightOfTwoVectors.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isEqualTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isNotEqualTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isTheWrittenStringCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isTheWrittenStringNotInIncorrectFormat.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.oneVectorFollowsTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.subtractingVectorFromAnotherVector.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.vectorsAddingIsCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.oolab [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.untitled [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.MapDirectionTest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfWestIsSouth.executor": "Run",
+    "Gradle.MapDirectionTest.testNext.executor": "Run",
+    "Gradle.MapDirectionTest.testPrevious.executor": "Run",
+    "Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray.executor": "Run",
+    "Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray.executor": "Run",
+    "Gradle.OptionsParserTest.executor": "Run",
+    "Gradle.Vector2dTest.doesOppositeOfVectorHaveBothNegatedCoordinates.executor": "Run",
+    "Gradle.Vector2dTest.doesOppositeOfVectorNotSwitchOneOrZeroCoordinates.executor": "Run",
+    "Gradle.Vector2dTest.equalsTest.executor": "Run",
+    "Gradle.Vector2dTest.executor": "Run",
+    "Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.getTheUpperRightOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.isEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isNotEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringCorrect.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringNotInIncorrectFormat.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorFollowsTheOther.executor": "Run",
+    "Gradle.Vector2dTest.subtractingVectorFromAnotherVector.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.vectorsAddingIsCorrect.executor": "Run",
+    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Run",
+    "Gradle.untitled [:agh.ics.oop.World.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "lab3",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
