@@ -1,7 +1,5 @@
 package agh.ics.oop;
-import agh.ics.oop.model.MoveDirection;
-import agh.ics.oop.model.Vector2d;
-import agh.ics.oop.model.MapDirection;
+import agh.ics.oop.model.*;
 
 public class World {
     public static void run(MoveDirection[] direction)
@@ -22,5 +20,7 @@ public class World {
     }
     public static void main(String[] args)
     {
+        Animal firstAnimal = new Animal();
+        System.out.println(firstAnimal.getPosition());
     }
 }
