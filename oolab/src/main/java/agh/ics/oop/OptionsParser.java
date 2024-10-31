@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// użyłam ArrayList, dlatego że w symulacji głównie używamy funkcji get, która jest szybsza w ArrayList
+// i też dodajemy elementy tylko w momencie utworzenia tej listy/tablicy
+// i w całym programie ich również nie usuwamy
+
+
 public class OptionsParser {
     public static List<MoveDirection> parse(String[] directions)
     {
