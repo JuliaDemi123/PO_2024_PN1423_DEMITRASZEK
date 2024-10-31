@@ -9,7 +9,7 @@ import java.util.List;
 public class OptionsParser {
     public static List<MoveDirection> parse(String[] directions)
     {
-        List<MoveDirection> movement = new LinkedList<MoveDirection>();
+        List<MoveDirection> movement = new ArrayList<MoveDirection>();
         for (String direction : directions)
         {
             switch (direction)

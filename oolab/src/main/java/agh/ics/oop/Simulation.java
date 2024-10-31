@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Simulation
 {
-    private List<Animal> animals = new LinkedList<Animal>();
+    private List<Animal> animals = new ArrayList<Animal>();
     private List<MoveDirection> movements;
 
     public Simulation(List<Vector2d> defaultPositions, List<MoveDirection> movements)
@@ -29,7 +29,7 @@ public class Simulation
         {
             animals.get(ind).move(direction);
             System.out.println( String.format("Zwierze %d: %s", ind, animals.get(ind).toString()) );
-            ind = (ind+1) % animals.size();
+            ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
 
     }
