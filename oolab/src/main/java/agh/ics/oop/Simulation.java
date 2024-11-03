@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Simulation
 {
-    private List<Animal> animals = new ArrayList<Animal>();
+    private final List<Animal> animals = new ArrayList<Animal>();
     private final List<MoveDirection> movements;
 
     public Simulation(List<Vector2d> defaultPositions, List<MoveDirection> movements)
