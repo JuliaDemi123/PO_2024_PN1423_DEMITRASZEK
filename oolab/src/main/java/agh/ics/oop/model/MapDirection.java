@@ -1,9 +1,14 @@
 package agh.ics.oop.model;
+
 public enum MapDirection {
     NORTH,
     SOUTH,
     WEST,
     EAST;
+    private static final Vector2d VectorNorth = new Vector2d(0,1);
+    private static final Vector2d VectorSouth = new Vector2d(0,-1);
+    private static final Vector2d VectorWest = new Vector2d(-1,0);
+    private static final Vector2d VectorEast = new Vector2d(1,0);
     public String toString()
     {
         return switch (this) {
@@ -36,10 +41,10 @@ public enum MapDirection {
     public Vector2d toUnitVector()
     {
         return switch (this) {
-            case NORTH -> new Vector2d(0,1);
-            case SOUTH -> new Vector2d(0,-1);
-            case WEST -> new Vector2d(-1,0);
-            case EAST -> new Vector2d(1,0);
+            case NORTH -> VectorNorth;
+            case SOUTH -> VectorSouth;
+            case WEST -> VectorWest;
+            case EAST -> VectorEast;
         };
     }
 }

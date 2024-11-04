@@ -1,26 +1,30 @@
 package agh.ics.oop;
-
 import java.util.Arrays;
-
 import agh.ics.oop.model.MoveDirection;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+// użyłam ArrayList, dlatego że w symulacji głównie używamy funkcji get, która jest szybsza w ArrayList
+// i też dodajemy elementy tylko w momencie utworzenia tej listy/tablicy
+// i w całym programie ich również nie usuwamy
 
 
 public class OptionsParser {
-    public static MoveDirection[] getDirections(String[] directions)
+    public static List<MoveDirection> parse(String[] directions)
     {
-        MoveDirection[] movement = new MoveDirection[directions.length];
-        int ind = 0;
+        List<MoveDirection> movement = new ArrayList<MoveDirection>();
         for (String direction : directions)
         {
             switch (direction)
             {
-                case "f" -> {movement[ind] = MoveDirection.FORWARD; ind++;}
-                case "b" -> {movement[ind] = MoveDirection.BACKWARD; ind++;}
-                case "r" -> {movement[ind] = MoveDirection.RIGHT; ind++;}
-                case "l" -> {movement[ind] = MoveDirection.LEFT; ind++;}
+                case "f" -> {movement.add(MoveDirection.FORWARD);}
+                case "b" -> {movement.add(MoveDirection.BACKWARD);}
+                case "r" -> {movement.add(MoveDirection.RIGHT);}
+                case "l" -> {movement.add(MoveDirection.LEFT);}
             }
         }
-        return Arrays.copyOf(movement, ind);
+        return movement;
     }
 }
 
