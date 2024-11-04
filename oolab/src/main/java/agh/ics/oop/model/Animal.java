@@ -42,33 +42,21 @@ public class Animal
         switch (direction)
         {
             case RIGHT:
-                orientation = switch (orientation)
-                {
-                    case NORTH -> MapDirection.EAST;
-                    case SOUTH -> MapDirection.WEST;
-                    case WEST -> MapDirection.NORTH;
-                    case EAST -> MapDirection.SOUTH;
-                };
+                orientation = orientation.next();
                 break;
             case LEFT:
-                orientation = switch (orientation)
-                {
-                    case NORTH -> MapDirection.WEST;
-                    case SOUTH -> MapDirection.EAST;
-                    case WEST -> MapDirection.SOUTH;
-                    case EAST -> MapDirection.NORTH;
-                };
+                orientation = orientation.previous();
                 break;
             case FORWARD:
-                position = newCoordinates( position.add(orientation.toUnitVector()) );
+                position = newPosition( position.add(orientation.toUnitVector()) );
                 break;
             case BACKWARD:
-                position = newCoordinates( position.add(orientation.toUnitVector().opposite()) );
+                position = newPosition( position.subtract(orientation.toUnitVector()) );
                 break;
         }
     }
 
-     private Vector2d newCoordinates(Vector2d newCoords)
+     private Vector2d newPosition(Vector2d newCoords)
     {
         return new Vector2d( Math.max(0,Math.min(newCoords.getX(),4)), Math.max(0,Math.min(newCoords.getY(),4)));
     }

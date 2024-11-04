@@ -33,7 +33,7 @@ public class Simulation
         }
     }
 
-    public List<Animal> getAnimalPositions()
+    public List<Animal> getAnimals()
     {
         return animals;
     }
