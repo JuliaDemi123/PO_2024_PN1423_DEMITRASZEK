@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangleMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangleMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangleMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/util/MapVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/util/MapVisualizer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,65 +53,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AnimalTest.animalIsNotGoingOutsideTheMatrix.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AnimalTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AnimalTest.hasTheRightOrientationWhenTurningRight.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AnimalTest.isAnimalGoingToWhereItIsSupposedTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.previousDirectionOfWestIsSouth.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.testNext.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MapDirectionTest.testPrevious.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.OptionsParserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.IsTheAnimalTurningRight.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.IsTheDataCorrectlyProcessed.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.IsTheDataCorrectlyProcessedWithOtherStringsInside.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.isTheAnimalGoingBackward.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.isTheAnimalGoingForward.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimulationTest.isTheAnimalTurningLeft.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.doesOppositeOfVectorHaveBothNegatedCoordinates.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.doesOppositeOfVectorNotSwitchOneOrZeroCoordinates.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.equalsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.getTheUpperRightOfTwoVectors.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isEqualTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isNotEqualTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isTheWrittenStringCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.isTheWrittenStringNotInIncorrectFormat.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.oneVectorFollowsTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.subtractingVectorFromAnotherVector.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Vector2dTest.vectorsAddingIsCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.oolab [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.untitled [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab4&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AnimalTest.animalIsNotGoingOutsideTheMatrix.executor": "Run",
+    "Gradle.AnimalTest.executor": "Run",
+    "Gradle.AnimalTest.hasTheRightOrientationWhenTurningRight.executor": "Run",
+    "Gradle.AnimalTest.isAnimalGoingToWhereItIsSupposedTo.executor": "Run",
+    "Gradle.MapDirectionTest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor": "Run",
+    "Gradle.MapDirectionTest.previousDirectionOfWestIsSouth.executor": "Run",
+    "Gradle.MapDirectionTest.testNext.executor": "Run",
+    "Gradle.MapDirectionTest.testPrevious.executor": "Run",
+    "Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray.executor": "Run",
+    "Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray.executor": "Run",
+    "Gradle.OptionsParserTest.executor": "Run",
+    "Gradle.SimulationTest.IsTheAnimalTurningRight.executor": "Run",
+    "Gradle.SimulationTest.IsTheDataCorrectlyProcessed.executor": "Run",
+    "Gradle.SimulationTest.IsTheDataCorrectlyProcessedWithOtherStringsInside.executor": "Run",
+    "Gradle.SimulationTest.executor": "Run",
+    "Gradle.SimulationTest.isTheAnimalGoingBackward.executor": "Run",
+    "Gradle.SimulationTest.isTheAnimalGoingForward.executor": "Run",
+    "Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap.executor": "Run",
+    "Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap.executor": "Run",
+    "Gradle.SimulationTest.isTheAnimalTurningLeft.executor": "Run",
+    "Gradle.Vector2dTest.doesOppositeOfVectorHaveBothNegatedCoordinates.executor": "Run",
+    "Gradle.Vector2dTest.doesOppositeOfVectorNotSwitchOneOrZeroCoordinates.executor": "Run",
+    "Gradle.Vector2dTest.equalsTest.executor": "Run",
+    "Gradle.Vector2dTest.executor": "Run",
+    "Gradle.Vector2dTest.getTheLowerLeftOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.getTheUpperRightOfTwoVectors.executor": "Run",
+    "Gradle.Vector2dTest.isEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isNotEqualTo.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringCorrect.executor": "Run",
+    "Gradle.Vector2dTest.isTheWrittenStringNotInIncorrectFormat.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorDoesNotFollowTheOther.executor": "Run",
+    "Gradle.Vector2dTest.oneVectorFollowsTheOther.executor": "Run",
+    "Gradle.Vector2dTest.subtractingVectorFromAnotherVector.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor": "Run",
+    "Gradle.Vector2dTest.vectorsAddingIsCorrect.executor": "Run",
+    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Debug",
+    "Gradle.untitled [:agh.ics.oop.World.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "lab4",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/untitled/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -118,30 +121,20 @@
       <recent name="agh.ics.oop.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap">
-    <configuration name="SimulationTest.IsTheAnimalTurningRight" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.IsTheAnimalTurningRight&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Application.World">
+    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
+      <module name="untitled.main" />
+      <option name="PROGRAM_PARAMETERS" value="r r l l f" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SimulationTest.isTheAnimalGoingForward" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -253,7 +246,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.SimulationTest.IsTheAnimalTurningRight" />
+      <item itemvalue="Application.World" />
       <item itemvalue="Gradle.SimulationTest.isTheAnimalGoingForward" />
       <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap" />
       <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap" />
@@ -261,11 +254,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.World" />
         <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap" />
         <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap" />
         <item itemvalue="Gradle.SimulationTest.isTheAnimalGoingForward" />
         <item itemvalue="Gradle.SimulationTest.isTheAnimalTurningLeft" />
-        <item itemvalue="Gradle.SimulationTest.IsTheAnimalTurningRight" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +288,7 @@
       <workItem from="1730118147070" duration="1105000" />
       <workItem from="1730387677773" duration="6310000" />
       <workItem from="1730668947635" duration="343000" />
-      <workItem from="1730713263706" duration="9004000" />
+      <workItem from="1730713263706" duration="14876000" />
     </task>
     <servers />
   </component>

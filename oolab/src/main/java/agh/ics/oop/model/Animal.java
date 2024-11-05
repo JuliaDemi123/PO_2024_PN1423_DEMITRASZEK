@@ -5,11 +5,6 @@ public class Animal
     private MapDirection orientation;
     private Vector2d position;
 
-    public Animal()
-    {
-        this.position = new Vector2d(2,2);
-        this.orientation = MapDirection.NORTH;
-    }
 
     public Animal(Vector2d position)
     {
@@ -17,9 +12,14 @@ public class Animal
         this.orientation = MapDirection.NORTH;
     }
 
+    public Animal()
+    {
+        this( new Vector2d(2,2) );
+    }
+
     public String toString()
     {
-        return position + " " + orientation;
+        return orientation.toString();
     }
 
     public boolean isAt(Vector2d position)
