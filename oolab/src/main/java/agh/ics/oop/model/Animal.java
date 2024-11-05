@@ -1,5 +1,7 @@
 package agh.ics.oop.model;
 
+import java.util.Objects;
+
 public class Animal
 {
     private MapDirection orientation;
@@ -64,6 +66,5 @@ public class Animal
                 break;
         }
     }
-
 
 }

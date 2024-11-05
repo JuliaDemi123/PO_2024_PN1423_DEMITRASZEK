@@ -25,7 +25,7 @@ public class RectangularMap implements WorldMap,MoveValidator
     @Override
     public boolean place(Animal animal)
     {
-        if (isOccupied(animal.getPosition()))
+        if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie
         {
             return false;
         }
@@ -45,7 +45,7 @@ public class RectangularMap implements WorldMap,MoveValidator
     @Override
     public void move(Animal animal, MoveDirection direction)
     {
-        if (isOccupied(animal.getPosition()))
+        if ( objectAt(animal.getPosition()) == animal )
         {
             animals.remove(animal.getPosition());
             animal.move(direction, this);
@@ -61,7 +61,9 @@ public class RectangularMap implements WorldMap,MoveValidator
 
     @Override
     public Animal objectAt(Vector2d position)
-    { return animals.get(position); }
+    {
+        return isOccupied(position) ? animals.get(position) : null;
+    }
 
 
     @Override
