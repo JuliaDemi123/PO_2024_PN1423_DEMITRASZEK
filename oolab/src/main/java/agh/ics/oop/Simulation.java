@@ -9,6 +9,7 @@ import java.util.List;
 public class Simulation
 {
     private final List<Animal> animals = new ArrayList<>();
+    private final List<Vector2d> animalPositions;
     private final List<MoveDirection> movements;
     private final WorldMap map;
 
@@ -16,9 +17,10 @@ public class Simulation
     {
         this.movements = movements;
         this.map = map;
+        this.animalPositions = animals;
         for(Vector2d animal : animals)
         {
-            animals.add(animal);
+            this.animals.add( new Animal(animal) );
             map.place(new Animal(animal));
         }
     }
@@ -28,21 +30,16 @@ public class Simulation
         int ind = 0;
         for (MoveDirection direction : movements)
         {
-
-            map.move( map.objectAt( animals.get(ind).getPosition() ), direction); 
-
-
-
+            map.move(  map.objectAt(animals.get(ind).getPosition()) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
             System.out.println(map.toString());
-            //System.out.println( String.format("Zwierze %d: %s", ind, animals.get(ind).toString()) );
             ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
 
     }
 
-    public List<Animal> getAnimals()
+    public List<Vector2d> getAnimalPositions()
     {
-        return animals;
+        return animalPositions;
     }
 
 }
