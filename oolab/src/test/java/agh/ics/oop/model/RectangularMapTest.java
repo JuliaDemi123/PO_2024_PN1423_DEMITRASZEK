@@ -16,7 +16,7 @@ class RectangularMapTest
     private final Vector2d pos5 = new Vector2d(4,4);
 
     @Test
-    public void isThePlaceCorrectlyAddingAnimalsToMap()
+    public void isPlaceCorrectlyAddingAnimalsToMap()
     {
        assertTrue(map.place(new Animal(pos1)));
        assertTrue(map.place(new Animal(pos2)));
@@ -24,7 +24,6 @@ class RectangularMapTest
        assertTrue(map.place(new Animal(pos4)));
        assertTrue(map.place(new Animal(pos5)));
     }
-
 
 
     @Test
@@ -78,7 +77,7 @@ class RectangularMapTest
     }
 
     @Test
-    public void thePositionsAreOccupied()
+    public void isOccupiedIsTrueIfThereIsAnAnimalAtAPosition()
     {
         map.place(new Animal(pos1));
         map.place(new Animal(pos2));
@@ -90,7 +89,7 @@ class RectangularMapTest
     }
 
     @Test
-    public void thePositionsAreNotOccupied()
+    public void isOccupiedIsFalseIfThereIsNoAnimalAtAPosition()
     {
         assertFalse(map.isOccupied(pos1));
         assertFalse(map.isOccupied(pos2));

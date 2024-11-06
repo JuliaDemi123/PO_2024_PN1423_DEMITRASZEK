@@ -6,12 +6,12 @@ import agh.ics.oop.model.util.MapVisualizer;
 
 public class RectangularMap implements WorldMap,MoveValidator
 {
-    private Map<Vector2d, Animal> animals = new HashMap<>();
-    final private Vector2d lowerLeftCornerOfMap = new Vector2d(0,0);
-    final private Vector2d higherRightCornerOfMap;
-    final private int width;
-    final private int height;
-    private MapVisualizer mapVisualizer;
+    private final Map<Vector2d, Animal> animals = new HashMap<>();
+    private final Vector2d lowerLeftCornerOfMap = new Vector2d(0,0);
+    private final Vector2d higherRightCornerOfMap;
+    private final int width;
+    private final int height;
+    private final MapVisualizer mapVisualizer;
 
     public RectangularMap (int width, int height)
     {
@@ -25,7 +25,7 @@ public class RectangularMap implements WorldMap,MoveValidator
     @Override
     public boolean place(Animal animal)
     {
-        if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie
+        if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie, a nie poza nia, i zwierze nie moze sie znajdowac na zajetym juz polu
         {
             return false;
         }
@@ -45,7 +45,7 @@ public class RectangularMap implements WorldMap,MoveValidator
     @Override
     public void move(Animal animal, MoveDirection direction)
     {
-        if ( objectAt(animal.getPosition()) == animal )
+        if ( objectAt(animal.getPosition()) == animal ) // porownywanie referencji
         {
             animals.remove(animal.getPosition());
             animal.move(direction, this);

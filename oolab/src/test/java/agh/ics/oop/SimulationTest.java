@@ -78,7 +78,20 @@ class SimulationTest
     @Test
     void areTheAnimalsHavingCorrectOrderOfCommands()
     {
-        
+        Simulation s = new Simulation(List.of(pos1,pos2,pos3),OptionsParser.parse( new String[] {"b","l","r","l","f"}),map);
+        s.run();
+
+        Assertions.assertEquals(s.getAnimalPositions().get(0),pos1);
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.WEST);
+
+
+        Assertions.assertEquals(s.getAnimalPositions().get(1),new Vector2d(0,4) );
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(1)).getOrientation(),MapDirection.WEST);
+
+
+        Assertions.assertEquals(s.getAnimalPositions().get(2),pos3);
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(2)).getOrientation(),MapDirection.EAST);
+
     }
 
   
