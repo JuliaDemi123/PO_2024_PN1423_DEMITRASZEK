@@ -6,44 +6,45 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Simulation
+public class Simulation<T,P>
 {
-    private final List<Animal> animals = new ArrayList<>();
-    private final List<Vector2d> animalPositions = new ArrayList<>();
+    private final List<T> objects = new ArrayList<>();
+    private final List<P> objectPositions = new ArrayList<>();
     private final List<MoveDirection> movements;
-    private final WorldMap map;
+    private final WorldMap<T,P> map;
 
-    public Simulation(List<Vector2d> animals, List<MoveDirection> movements, WorldMap map)
+    public <T,P> Simulation(List<P> objectPositions, List<MoveDirection> movements, WorldMap<T,P> map)
     {
         this.movements = movements;
         this.map = map;
-        for(Vector2d animal : animals)
+        int i = 0;
+        for(P position : objectPositions)
         {
-            Animal a = new Animal(animal);
+            T a = new T(position);
             if(map.place(a)) // nie ma innego zwierzaka na tym miejscu
             {
-                this.animals.add( a );
-                this.animalPositions.add( a.getPosition() );
+                this.objects.add(new T());
+                this.objectPositions.add( position );
             }
         }
     }
 
-    public void run()
+    public <T,P> void run()
     {
         int ind = 0;
         for (MoveDirection direction : movements)
         {
-            map.move(  map.objectAt(animals.get(ind).getPosition()) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
-            animalPositions.set(ind,animals.get(ind).getPosition());
+            map.move(  map.objectAt(objects.get(ind).getPosition()) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
+            objectPositions.set(ind,objects.get(ind).getPosition());
             System.out.println(map.toString());
-            ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
+            ind = (ind+1) % objects.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
 
     }
 
-    public List<Vector2d> getAnimalPositions()
+    public <P> List<P> getAnimalPositions()
     {
-        return animalPositions;
+        return objectPositions;
     }
 
 }
