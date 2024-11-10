@@ -22,6 +22,7 @@ public class Simulation<T,P>
             //T a = new T(position);
             if(map.canMoveTo(position)) // nie ma innego zwierzaka na tym miejscu
             {
+                map.place()
                 this.objects.add(new T()); // animals
                 this.objectPositions.add( position );
             }
