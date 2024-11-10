@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
+import org.w3c.dom.css.Rect;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -22,8 +23,9 @@ public class Simulation<T,P>
             //T a = new T(position);
             if(map.canMoveTo(position)) // nie ma innego zwierzaka na tym miejscu
             {
-                map.place()
-                this.objects.add(new T()); // animals
+                T newObject = createObject(map,position);
+                map.place(newObject);
+                this.objects.add(newObject); // animals
                 this.objectPositions.add( position );
             }
         }
@@ -41,6 +43,21 @@ public class Simulation<T,P>
         }
 
     }
+
+    private T createObject(WorldMap<T,P> Map, P position)
+    {
+        if (Map instanceof TextMap)
+        {
+            return (T) new String();
+        }
+        else if(Map instanceof RectangularMap)
+        {
+            return (T) new Animal((Vector2d) position);
+        }
+        // Jeśli nie udało się stworzyć obiektu, zwracamy null
+        return null;
+    }
+}
 
    // public List<P> getAnimalPositions()
    // {
