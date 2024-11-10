@@ -13,17 +13,16 @@ public class Simulation<T,P>
     private final List<MoveDirection> movements;
     private final WorldMap<T,P> map;
 
-    public <T,P> Simulation(List<P> objectPositions, List<MoveDirection> movements, WorldMap<T,P> map)
+    public Simulation(List<P> objectPositions, List<MoveDirection> movements, WorldMap<T,P> map)
     {
         this.movements = movements;
         this.map = map;
-        int i = 0;
         for(P position : objectPositions)
         {
-            T a = new T(position);
-            if(map.place(a)) // nie ma innego zwierzaka na tym miejscu
+            //T a = new T(position);
+            if(map.canMoveTo(position)) // nie ma innego zwierzaka na tym miejscu
             {
-                this.objects.add(new T());
+                this.objects.add(new T()); // animals
                 this.objectPositions.add( position );
             }
         }
@@ -34,17 +33,17 @@ public class Simulation<T,P>
         int ind = 0;
         for (MoveDirection direction : movements)
         {
-            map.move(  map.objectAt(objects.get(ind).getPosition()) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
-            objectPositions.set(ind,objects.get(ind).getPosition());
+            map.move( objects.get(ind) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
+          //  objectPositions.set(ind,objects.get(ind).getPosition());
             System.out.println(map.toString());
             ind = (ind+1) % objects.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
 
     }
 
-    public <P> List<P> getAnimalPositions()
-    {
-        return objectPositions;
-    }
+   // public List<P> getAnimalPositions()
+   // {
+   //     return objectPositions;
+   // }
 
 }
