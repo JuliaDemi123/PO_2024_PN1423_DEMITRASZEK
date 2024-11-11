@@ -15,7 +15,7 @@ public class TextMap implements WorldMap<String,Integer>, MoveValidator<Integer>
     public boolean place (String text)
     {
         strings.add(text);
-        stringToIndex.put(text, strings.size());
+        stringToIndex.put(text, strings.size()-1);
         return true;
     }
 
@@ -56,16 +56,19 @@ public class TextMap implements WorldMap<String,Integer>, MoveValidator<Integer>
         return isOccupied(index) ? strings.get(index) : null;
     }
 
-    public Integer getStringToIndex(String text)
-    {
-        return stringToIndex.get(text);
-    }
-
     @Override
     public boolean canMoveTo(Integer index)
     {
         return index >= 0 && index < strings.size();
     }
 
+
+    @Override
+    public String toString() { return strings.toString(); }
+
+    private Integer getStringToIndex(String text)
+    {
+        return stringToIndex.get(text);
+    }
 
 }

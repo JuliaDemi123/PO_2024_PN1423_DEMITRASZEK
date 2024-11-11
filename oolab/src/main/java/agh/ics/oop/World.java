@@ -21,12 +21,20 @@ public class World {
     }
     public static void main(String[] args)
     {
-        RectangularMap map = new RectangularMap(4,4);
-        List<MoveDirection> directions = OptionsParser.parse(args);
-        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directions, map);
-        simulation.run();
+        TextMap text = new TextMap();
+        text.place("Ala");
+        text.place("ma");
+        text.place("sowoniedzwiedzia");
+        text.move("ma",MoveDirection.RIGHT);
+        System.out.println(text.toString());
 
-        Animal a = new Animal(new Vector2d(2,2));
+        text.place("r");
+        text.place("f");
+        text.place("b");
+        text.move("f",MoveDirection.LEFT);
+        System.out.println(text.toString());
+        System.out.println(text.objectAt(1));
+        System.out.println(text.canMoveTo(4));
+        System.out.println(text.canMoveTo(10));
     }
 }
