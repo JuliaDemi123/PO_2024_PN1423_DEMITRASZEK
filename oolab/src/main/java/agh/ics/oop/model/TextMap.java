@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TextMap implements WorldMap<String,Integer>, MoveValidator<Integer>
+public class TextMap implements WorldNumberPositionMap<String,Integer>, MoveValidator<Integer>
 {
     // mapa nie ma gornej granicy
     private final List<String> strings = new ArrayList<>();
@@ -66,7 +66,7 @@ public class TextMap implements WorldMap<String,Integer>, MoveValidator<Integer>
     @Override
     public String toString() { return strings.toString(); }
 
-    private Integer getStringToIndex(String text)
+    public Integer getStringToIndex(String text)
     {
         return stringToIndex.get(text);
     }

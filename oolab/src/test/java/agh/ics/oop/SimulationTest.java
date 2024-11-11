@@ -22,8 +22,8 @@ class SimulationTest
     {
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"r"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.EAST);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.EAST);
     }
 
     @Test
@@ -31,8 +31,8 @@ class SimulationTest
     {
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"l"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.WEST);
     }
 
     @Test
@@ -41,8 +41,8 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos3),OptionsParser.parse( new String[] {"f"}),map );
         s.run();
 
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(2,4));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(2,4));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
@@ -50,8 +50,8 @@ class SimulationTest
     {
         Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"f"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,4));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(1,4));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
@@ -59,8 +59,8 @@ class SimulationTest
     {
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"b"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
 
@@ -70,8 +70,8 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"b"}),map);
         s.run();
 
-        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,3));
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getObjectPositions().get(0),new Vector2d(1,3));
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.NORTH);
 
     }
 
@@ -81,16 +81,16 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos1,pos2,pos3),OptionsParser.parse( new String[] {"b","l","r","l","f"}),map);
         s.run();
 
-        Assertions.assertEquals(s.getAnimalPositions().get(0),pos1);
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals(s.getObjectPositions().get(0),pos1);
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(0)).getOrientation(),MapDirection.WEST);
 
 
-        Assertions.assertEquals(s.getAnimalPositions().get(1),new Vector2d(0,4) );
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(1)).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals(s.getObjectPositions().get(1),new Vector2d(0,4) );
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(1)).getOrientation(),MapDirection.WEST);
 
 
-        Assertions.assertEquals(s.getAnimalPositions().get(2),pos3);
-        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(2)).getOrientation(),MapDirection.EAST);
+        Assertions.assertEquals(s.getObjectPositions().get(2),pos3);
+        Assertions.assertEquals(map.objectAt((Vector2d) s.getObjectPositions().get(2)).getOrientation(),MapDirection.EAST);
 
     }
 

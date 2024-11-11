@@ -10,7 +10,6 @@ import java.util.List;
 public class Simulation<T,P>
 {
     private final List<T> objects = new ArrayList<>();
-    private final List<P> objectPositions = new ArrayList<>();
     private final List<MoveDirection> movements;
     private final WorldMap<T,P> map;
 
@@ -18,15 +17,15 @@ public class Simulation<T,P>
     {
         this.movements = movements;
         this.map = map;
+        Integer ind = 0;
         for(P position : objectPositions)
         {
             //T a = new T(position);
-            if(map.canMoveTo(position)) // nie ma innego zwierzaka na tym miejscu
+            T newObject = createObject(map,position);
+            if ((map instanceof RectangularMap && map.canMoveTo(position)) || map instanceof TextMap) // nie ma innego zwierzaka na tym miejscu
             {
-                T newObject = createObject(map,position);
                 map.place(newObject);
-                this.objects.add(newObject); // animals
-                this.objectPositions.add( position );
+                this.objects.add(newObject);
             }
         }
     }
@@ -37,7 +36,6 @@ public class Simulation<T,P>
         for (MoveDirection direction : movements)
         {
             map.move( objects.get(ind) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
-          //  objectPositions.set(ind,objects.get(ind).getPosition());
             System.out.println(map.toString());
             ind = (ind+1) % objects.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
@@ -54,14 +52,10 @@ public class Simulation<T,P>
         {
             return (T) new Animal((Vector2d) position);
         }
-        // Jeśli nie udało się stworzyć obiektu, zwracamy null
         return null;
     }
+
 }
 
-   // public List<P> getAnimalPositions()
-   // {
-   //     return objectPositions;
-   // }
 
 
