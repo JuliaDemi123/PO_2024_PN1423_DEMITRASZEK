@@ -33,7 +33,7 @@ public class Simulation
         int ind = 0;
         for (MoveDirection direction : movements)
         {
-            map.move(  map.objectAt(animals.get(ind).getPosition()) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
+            map.move( animals.get(ind) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
             animalPositions.set(ind,animals.get(ind).getPosition());
             System.out.println(map.toString());
             ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
