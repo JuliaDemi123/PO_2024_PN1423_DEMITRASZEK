@@ -1,15 +1,12 @@
 package agh.ics.oop.model;
 
+import java.util.Objects;
+
 public class Animal
 {
     private MapDirection orientation;
     private Vector2d position;
 
-    public Animal()
-    {
-        this.position = new Vector2d(2,2);
-        this.orientation = MapDirection.NORTH;
-    }
 
     public Animal(Vector2d position)
     {
@@ -17,9 +14,14 @@ public class Animal
         this.orientation = MapDirection.NORTH;
     }
 
+    public Animal()
+    {
+        this( new Vector2d(2,2) );
+    }
+
     public String toString()
     {
-        return position.toString() + " " + orientation.toString();
+        return orientation.toString();
     }
 
     public boolean isAt(Vector2d position)
@@ -37,8 +39,9 @@ public class Animal
         return orientation;
     }
 
-    public void move(MoveDirection direction)
+    public void move(MoveDirection direction,MoveValidator validator)
     {
+        Vector2d newPosition;
         switch (direction)
         {
             case RIGHT:
@@ -48,17 +51,20 @@ public class Animal
                 orientation = orientation.previous();
                 break;
             case FORWARD:
-                position = newPosition( position.add(orientation.toUnitVector()) );
+                 newPosition = position.add(orientation.toUnitVector());
+                if (validator.canMoveTo(newPosition))
+                {
+                    position = newPosition;
+                }
                 break;
             case BACKWARD:
-                position = newPosition( position.subtract(orientation.toUnitVector()) );
+                 newPosition = position.subtract(orientation.toUnitVector()); // ?
+                if (validator.canMoveTo(newPosition))
+                {
+                    position = newPosition;
+                }
                 break;
         }
-    }
-
-     private Vector2d newPosition(Vector2d newCoords)
-    {
-        return new Vector2d( Math.max(0,Math.min(newCoords.getX(),4)), Math.max(0,Math.min(newCoords.getY(),4)));
     }
 
 }

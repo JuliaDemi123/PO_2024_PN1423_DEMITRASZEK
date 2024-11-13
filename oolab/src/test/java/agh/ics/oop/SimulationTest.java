@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.MapDirection;
+import agh.ics.oop.model.RectangularMap;
 import agh.ics.oop.model.Vector2d;
 import agh.ics.oop.OptionsParser;
 import org.junit.jupiter.api.Assertions;
@@ -14,80 +15,83 @@ class SimulationTest
     private final Vector2d pos1 = new Vector2d(0, 0);
     private final Vector2d pos2 = new Vector2d(1, 4);
     private final Vector2d pos3 = new Vector2d(2, 3);
+    private final RectangularMap map = new RectangularMap(4,4);
 
     @Test
     void IsTheAnimalTurningRight()
     {
-        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"r"}) );
+        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"r"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(0,0));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.EAST);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.EAST);
     }
 
     @Test
     void isTheAnimalTurningLeft()
     {
-        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"l"}) );
+        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"l"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(0,0));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.WEST);
     }
 
     @Test
     void isTheAnimalGoingForward()
     {
-        Simulation s = new Simulation(List.of(pos3),OptionsParser.parse( new String[] {"f"}) );
+        Simulation s = new Simulation(List.of(pos3),OptionsParser.parse( new String[] {"f"}),map );
         s.run();
 
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(2,4));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(2,4));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
     void isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap()
     {
-        Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"f"}) );
+        Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"f"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(1,4));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,4));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
     void isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap()
     {
-        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"b"}) );
+        Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"b"}),map );
         s.run();
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(0,0));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
     }
 
 
     @Test
     void isTheAnimalGoingBackward()
     {
-        Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"b"}) );
+        Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"b"}),map);
         s.run();
 
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(1,3));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,3));
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.NORTH);
 
     }
 
-
     @Test
-    void IsTheDataCorrectlyProcessedWithOtherStringsInside()
+    void areTheAnimalsHavingCorrectOrderOfCommands()
     {
-        Simulation s = new Simulation(List.of(pos1, pos2, pos3),OptionsParser.parse(new String[]{"r","l","broccoli","f","orange","f","f","apple","b","r","f","f","spaghetti","f","f","f"}));
+        Simulation s = new Simulation(List.of(pos1,pos2,pos3),OptionsParser.parse( new String[] {"b","l","r","l","f"}),map);
         s.run();
 
-        Assertions.assertEquals(s.getAnimals().get(0).getPosition(),new Vector2d(1,0));
-        Assertions.assertEquals(s.getAnimals().get(0).getOrientation(),MapDirection.SOUTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(0),pos1);
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(0)).getOrientation(),MapDirection.WEST);
 
-        Assertions.assertEquals(s.getAnimals().get(1).getPosition(),new Vector2d(0,4));
-        Assertions.assertEquals(s.getAnimals().get(1).getOrientation(),MapDirection.WEST);
 
-        Assertions.assertEquals(s.getAnimals().get(2).getPosition(),new Vector2d(2,4));
-        Assertions.assertEquals(s.getAnimals().get(2).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(s.getAnimalPositions().get(1),new Vector2d(0,4) );
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(1)).getOrientation(),MapDirection.WEST);
+
+
+        Assertions.assertEquals(s.getAnimalPositions().get(2),pos3);
+        Assertions.assertEquals(map.objectAt(s.getAnimalPositions().get(2)).getOrientation(),MapDirection.EAST);
+
     }
 
   

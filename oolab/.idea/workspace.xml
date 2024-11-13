@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
   "keyToString": {
     "Gradle.AnimalTest.animalIsNotGoingOutsideTheMatrix.executor": "Run",
     "Gradle.AnimalTest.executor": "Run",
+    "Gradle.AnimalTest.hasTheRightOrientationWhenTurningLeft.executor": "Run",
     "Gradle.AnimalTest.hasTheRightOrientationWhenTurningRight.executor": "Run",
     "Gradle.AnimalTest.isAnimalGoingToWhereItIsSupposedTo.executor": "Run",
     "Gradle.MapDirectionTest.executor": "Run",
@@ -66,9 +63,22 @@
     "Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray.executor": "Run",
     "Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray.executor": "Run",
     "Gradle.OptionsParserTest.executor": "Run",
+    "Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsAboveWidth.executor": "Run",
+    "Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsBelow0.executor": "Run",
+    "Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredYIsAboveHeight.executor": "Run",
+    "Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredYIsBelow0.executor": "Run",
+    "Gradle.RectangularMapTest.executor": "Run",
+    "Gradle.RectangularMapTest.isThePlaceCorrectlyAddingAnimalsToMap.executor": "Run",
+    "Gradle.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap.executor": "Run",
+    "Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged.executor": "Run",
+    "Gradle.RectangularMapTest.objectAtReturnsAnimalPositionIfPositionIsCorrect.executor": "Run",
+    "Gradle.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect.executor": "Run",
+    "Gradle.RectangularMapTest.placeShouldNotAddAnimalsAtTheSamePosition.executor": "Run",
+    "Gradle.RectangularMapTest.thePositionsAreNotOccupied.executor": "Run",
     "Gradle.SimulationTest.IsTheAnimalTurningRight.executor": "Run",
     "Gradle.SimulationTest.IsTheDataCorrectlyProcessed.executor": "Run",
     "Gradle.SimulationTest.IsTheDataCorrectlyProcessedWithOtherStringsInside.executor": "Run",
+    "Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands.executor": "Run",
     "Gradle.SimulationTest.executor": "Run",
     "Gradle.SimulationTest.isTheAnimalGoingBackward.executor": "Run",
     "Gradle.SimulationTest.isTheAnimalGoingForward.executor": "Run",
@@ -96,7 +106,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "lab3",
+    "git-widget-placeholder": "lab4",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -115,12 +125,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="agh.ics.oop" />
       <recent name="agh.ics.oop.model" />
+      <recent name="agh.ics.oop" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap">
-    <configuration name="SimulationTest.IsTheAnimalTurningRight" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged">
+    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.IsTheAnimalTurningRight&quot;" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -144,7 +154,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.isTheAnimalGoingForward" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsAboveWidth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.isTheAnimalGoingForward&quot;" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsAboveWidth&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,7 +178,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -181,7 +191,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap&quot;" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,7 +202,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -205,7 +215,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap&quot;" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,7 +226,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.isTheAnimalTurningLeft" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -229,7 +239,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.isTheAnimalTurningLeft&quot;" />
+            <option value="&quot;agh.ics.oop.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -254,19 +264,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.SimulationTest.IsTheAnimalTurningRight" />
-      <item itemvalue="Gradle.SimulationTest.isTheAnimalGoingForward" />
-      <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap" />
-      <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap" />
-      <item itemvalue="Gradle.SimulationTest.isTheAnimalTurningLeft" />
+      <item itemvalue="Gradle.RectangularMapTest" />
+      <item itemvalue="Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsAboveWidth" />
+      <item itemvalue="Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" />
+      <item itemvalue="Gradle.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" />
+      <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingBackwardOutsideMap" />
-        <item itemvalue="Gradle.SimulationTest.isTheAnimalStayingInPlaceWhenGoingForwardOutsideMap" />
-        <item itemvalue="Gradle.SimulationTest.isTheAnimalGoingForward" />
-        <item itemvalue="Gradle.SimulationTest.isTheAnimalTurningLeft" />
-        <item itemvalue="Gradle.SimulationTest.IsTheAnimalTurningRight" />
+        <item itemvalue="Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" />
+        <item itemvalue="Gradle.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" />
+        <item itemvalue="Gradle.RectangularMapTest" />
+        <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
+        <item itemvalue="Gradle.RectangularMapTest.cannotMoveToAPositionIfTheDesiredXIsAboveWidth" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +306,7 @@
       <workItem from="1730118147070" duration="1105000" />
       <workItem from="1730387677773" duration="6310000" />
       <workItem from="1730668947635" duration="343000" />
-      <workItem from="1730713263706" duration="1456000" />
+      <workItem from="1730713263706" duration="30107000" />
     </task>
     <servers />
   </component>
