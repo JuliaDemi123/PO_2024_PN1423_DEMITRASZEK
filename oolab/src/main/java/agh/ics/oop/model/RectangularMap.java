@@ -15,9 +15,9 @@ public class RectangularMap implements WorldMap,MoveValidator
 
     public RectangularMap (int width, int height)
     {
-        this.width = width;
-        this.height = height;
-        higherRightCornerOfMap = new Vector2d(width,height);
+        this.width = width-1;
+        this.height = height-1;
+        higherRightCornerOfMap = new Vector2d(width-1,height-1);
         mapVisualizer = new MapVisualizer(this);
     }
 
