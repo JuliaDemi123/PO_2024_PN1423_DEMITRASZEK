@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MoveValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MoveValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldElement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +43,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -323,7 +319,7 @@
       <workItem from="1730387677773" duration="6310000" />
       <workItem from="1730668947635" duration="343000" />
       <workItem from="1730713263706" duration="30107000" />
-      <workItem from="1731498805067" duration="3611000" />
+      <workItem from="1731498805067" duration="6094000" />
     </task>
     <servers />
   </component>

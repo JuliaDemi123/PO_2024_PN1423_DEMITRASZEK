@@ -2,6 +2,6 @@ package agh.ics.oop.model;
 
 public interface WorldElement
 {
-    public Vector2d getPosition();
-    public String toString();
+    Vector2d getPosition();
+    String toString();
 }
