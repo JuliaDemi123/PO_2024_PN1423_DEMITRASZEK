@@ -3,9 +3,10 @@ package agh.ics.oop.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class AbstractWorldMap implements MoveValidator
+public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 {
-    private final Map<Vector2d, Animal> animals = new HashMap<>();
+    protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
+
     public boolean place(Animal animal)
     {
         if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie, a nie poza nia, i zwierze nie moze sie znajdowac na zajetym juz polu

@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class GrassField implements WorldMap,MoveValidator
+public class GrassField extends AbstractWorldMap
 {
     private final int grassCount;
     private final MapVisualizer mapVisualizer;
     private final Map<Vector2d,Grass> grasses = new HashMap<Vector2d,Grass>();
-    private final Map<Vector2d,Animal> animals = new HashMap<Vector2d,Animal>();
+//    private final Map<Vector2d,Animal> animals = new HashMap<Vector2d,Animal>();
 
 
     public GrassField(int grassCount)
@@ -31,56 +31,70 @@ public class GrassField implements WorldMap,MoveValidator
 
     }
 
-    @Override
-    public boolean place(Animal animal)
-    {
-        if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie, a nie poza nia, i zwierze nie moze sie znajdowac na zajetym juz polu
-        {
-            return false;
-        }
-        else
-        {
-            animals.put(animal.getPosition(), animal);
-            return true;
-        }
-    }
+//    @Override
+//    public boolean place(Animal animal)
+//    {
+//        if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie, a nie poza nia, i zwierze nie moze sie znajdowac na zajetym juz polu
+//        {
+//            return false;
+//        }
+//        else
+//        {
+//            animals.put(animal.getPosition(), animal);
+//            return true;
+//        }
+//    }
+
+//    @Override
+//    public void move(Animal animal, MoveDirection direction)
+//    {
+//        animals.remove(animal.getPosition());
+//        animal.move(direction, this);
+//        animals.put(animal.getPosition(), animal);
+//    }
 
     @Override
-    public void move(Animal animal, MoveDirection direction)
-    {
-        animals.remove(animal.getPosition());
-        animal.move(direction, this);
-        animals.put(animal.getPosition(), animal);
-    }
-
-    @Override
-    public String toString()
-    {
-        return mapVisualizer.draw(lowerLeftCorner(),upperRightCorner());
-    }
+    public String toString() { return mapVisualizer.draw(lowerLeftCorner(),upperRightCorner()); }
 
     @Override
     public boolean isOccupied(Vector2d position) // sprawdza tylko dla zwierzaka
     {
-        return animals.containsKey(position) || grasses.containsKey(position);
+        return super.isOccupied(position) || grasses.containsKey(position);
     }
+
+//    @Override
+//    public WorldElement objectAt(Vector2d position)
+//    {
+//        if ( animals.containsKey(position) )
+//        {
+//            return animals.get(position);
+//        }
+//        else if ( grasses.containsKey(position) )
+//        {
+//            return grasses.get(position);
+//        }
+//        else
+//        {
+//            return null;
+//        }
+//    }
+
 
     @Override
     public WorldElement objectAt(Vector2d position)
     {
-        if ( animals.containsKey(position) )
+        WorldElement elem = super.objectAt(position);
+        if( elem == null )
         {
-            return animals.get(position);
-        }
-        else if ( grasses.containsKey(position) )
-        {
-            return grasses.get(position);
+            if (grasses.containsKey(position)) { return grasses.get(position); }
+            return null;
         }
         else
         {
-            return null;
+            return elem;
         }
     }
+
 
     @Override
     public boolean canMoveTo(Vector2d position) // tylko dla zwierzakow
