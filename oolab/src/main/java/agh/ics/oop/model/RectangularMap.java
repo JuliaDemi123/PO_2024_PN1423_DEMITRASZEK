@@ -45,12 +45,9 @@ public class RectangularMap implements WorldMap,MoveValidator
     @Override
     public void move(Animal animal, MoveDirection direction)
     {
-        if ( objectAt(animal.getPosition()) == animal ) // porownywanie referencji
-        {
-            animals.remove(animal.getPosition());
-            animal.move(direction, this);
-            animals.put(animal.getPosition(), animal);
-        }
+        animals.remove(animal.getPosition());
+        animal.move(direction, this);
+        animals.put(animal.getPosition(), animal);
     }
 
     @Override

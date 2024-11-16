@@ -5,11 +5,11 @@ import java.util.List;
 
 public class RandomPositionGenerator implements Iterable<Vector2d>
 {
-    protected final int maxWidth;
-    protected final int maxHeight;
-    protected final int grassCount;
+    private final int maxWidth;
+    private final int maxHeight;
+    private final int grassCount;
     protected int count = 0;
-    protected List<Integer> positions = new ArrayList<Integer>();
+    protected final List<Integer> positions = new ArrayList<Integer>();
 
     public RandomPositionGenerator(int maxWidth, int maxHeight, int grassCount)
     {
@@ -18,7 +18,7 @@ public class RandomPositionGenerator implements Iterable<Vector2d>
         this.grassCount = grassCount;
 
         // gdyby maxWidth != maxHeight
-        for ( int i = 0; i <= (maxWidth+1)*(maxHeight+1); i++ )
+        for ( int i = 0; i < (maxWidth+1)*(maxHeight+1); i++ )
         {
             positions.add(i);
         }
@@ -27,6 +27,20 @@ public class RandomPositionGenerator implements Iterable<Vector2d>
     @Override
     public Iterator<Vector2d> iterator() {
         return new RandomPositionIterator(this);
+    }
+
+    public int getMaxWidth()
+    {
+        return maxWidth;
+    }
+
+    public int getMaxHeight()
+    {
+        return maxHeight;
+    }
+    public int getGrassCount()
+    {
+        return grassCount;
     }
 }
 

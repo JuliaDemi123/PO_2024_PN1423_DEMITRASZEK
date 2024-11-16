@@ -14,7 +14,7 @@ public class RandomPositionIterator implements Iterator<Vector2d>
     @Override
     public boolean hasNext()
     {
-        return randomPositionGenerator.count < randomPositionGenerator.grassCount;
+        return randomPositionGenerator.count < randomPositionGenerator.getGrassCount();
     }
 
     @Override
@@ -27,10 +27,10 @@ public class RandomPositionIterator implements Iterator<Vector2d>
 
     private Vector2d generateNewPosition()
     {
-        int position = randomPositionGenerator.positions.get(random.nextInt(randomPositionGenerator.positions.size()-randomPositionGenerator.grassCount));
+        int position = randomPositionGenerator.positions.get(random.nextInt(randomPositionGenerator.positions.size()-randomPositionGenerator.getGrassCount()));
 
-        int randomXPosition = (int)position/(randomPositionGenerator.maxWidth+1);
-        int randomYPosition = position%(randomPositionGenerator.maxHeight+1);
+        int randomXPosition = (int)position/(randomPositionGenerator.getMaxWidth()+1);
+        int randomYPosition = position%(randomPositionGenerator.getMaxHeight()+1);
 
         Vector2d newPosition = new Vector2d(randomXPosition, randomYPosition);
 
