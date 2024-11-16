@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GrassFieldTest
 {
-    private final GrassField grassField = new GrassField(10);
+    private final GrassField grassField = new GrassField(0);
+    // jezeli bedzie kepka trawy, a nie bedzie zwierzaka to isOccupied zwroci true
     private final Vector2d pos1 = new Vector2d(2,3);
     private final Vector2d pos2 = new Vector2d(0,0);
     private final Vector2d pos3 = new Vector2d(3984,34240);
