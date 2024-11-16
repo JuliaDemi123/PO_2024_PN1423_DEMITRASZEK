@@ -12,11 +12,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +157,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SimulationTest">
+    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
+      <module name="untitled.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -253,30 +266,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="oolab" />
       <method v="2">
@@ -291,8 +280,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.World" />
       <item itemvalue="Gradle.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap" />
-      <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
       <item itemvalue="Gradle.GrassFieldTest" />
       <item itemvalue="Gradle.SimulationTest" />
       <item itemvalue="Gradle.RectangularMapTest" />
@@ -302,8 +291,8 @@
         <item itemvalue="Gradle.SimulationTest" />
         <item itemvalue="Gradle.RectangularMapTest" />
         <item itemvalue="Gradle.GrassFieldTest" />
+        <item itemvalue="Application.World" />
         <item itemvalue="Gradle.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap" />
-        <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +324,7 @@
       <workItem from="1730668947635" duration="343000" />
       <workItem from="1730713263706" duration="30107000" />
       <workItem from="1731498805067" duration="6141000" />
-      <workItem from="1731747920018" duration="15061000" />
+      <workItem from="1731747920018" duration="16154000" />
     </task>
     <servers />
   </component>

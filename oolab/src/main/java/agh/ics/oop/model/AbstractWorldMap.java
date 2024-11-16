@@ -1,5 +1,7 @@
 package agh.ics.oop.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,4 +39,9 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     }
 
     public abstract String toString();
+
+    public List<WorldElement> getElements()
+    {
+        return new ArrayList<>(animals.values());
+    }
 }

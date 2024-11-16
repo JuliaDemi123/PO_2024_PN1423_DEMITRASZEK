@@ -29,5 +29,7 @@ public class World {
         grassfield.place(new Animal(pos1));
         grassfield.place(new Animal(pos2));
         System.out.println(grassfield.toString());
+
+        List<WorldElement> list = grassfield.getElements();
     }
 }
