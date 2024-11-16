@@ -20,7 +20,13 @@ public abstract class AbstractWorldMap implements MoveValidator
     }
 
     public abstract boolean canMoveTo(Vector2d position);
-    public abstract boolean isOccupied(Vector2d position);
+    public boolean isOccupied(Vector2d position)
+    {
+        return animals.containsKey(position);
+    } // moge wykorzystac funkcjonalnosc w grassfieldzie
+
+    public WorldElement objectAt(Vector2d position)
+    { return isOccupied(position) ? animals.get(position) : null; }
 
     public void move(Animal animal, MoveDirection direction)
     {
