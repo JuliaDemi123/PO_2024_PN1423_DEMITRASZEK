@@ -11,12 +11,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/GrassFieldTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,11 @@
     "Gradle.AnimalTest.hasTheRightOrientationWhenTurningLeft.executor": "Run",
     "Gradle.AnimalTest.hasTheRightOrientationWhenTurningRight.executor": "Run",
     "Gradle.AnimalTest.isAnimalGoingToWhereItIsSupposedTo.executor": "Run",
+    "Gradle.GrassFieldTest.executor": "Run",
+    "Gradle.GrassFieldTest.placeReturnsFalseForNegativePositions.executor": "Run",
+    "Gradle.GrassFieldTest.placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition.executor": "Run",
+    "Gradle.GrassFieldTest.placeReturnsTrueForLargeIntsInVector.executor": "Run",
+    "Gradle.GrassFieldTest.placeReturnsTrueIfValidPosition.executor": "Run",
     "Gradle.MapDirectionTest.executor": "Run",
     "Gradle.MapDirectionTest.previousDirectionOfEastIsNorth.executor": "Run",
     "Gradle.MapDirectionTest.previousDirectionOfNorthIsWest.executor": "Run",
@@ -123,7 +128,7 @@
     "Gradle.Vector2dTest.testIfOneIsntBeforeTheOther.executor": "Run",
     "Gradle.Vector2dTest.testIfOneVectorIsBeforeTheOther.executor": "Run",
     "Gradle.Vector2dTest.vectorsAddingIsCorrect.executor": "Run",
-    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Debug",
+    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Run",
     "Gradle.untitled [:agh.ics.oop.World.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -165,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -178,7 +183,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,7 +194,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.placeReturnsFalseForNegativePositions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -202,7 +207,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest.placeReturnsFalseForNegativePositions&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,7 +218,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -226,7 +231,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest.placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -237,7 +242,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.placeReturnsTrueForLargeIntsInVector" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,7 +255,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest.placeReturnsTrueForLargeIntsInVector&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -276,18 +281,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.RectangularMapTest" />
-      <item itemvalue="Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" />
-      <item itemvalue="Gradle.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" />
-      <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
+      <item itemvalue="Gradle.GrassFieldTest" />
+      <item itemvalue="Gradle.GrassFieldTest.placeReturnsFalseForNegativePositions" />
+      <item itemvalue="Gradle.GrassFieldTest.placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition" />
+      <item itemvalue="Gradle.GrassFieldTest.placeReturnsTrueForLargeIntsInVector" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.World" />
-        <item itemvalue="Gradle.RectangularMapTest" />
-        <item itemvalue="Gradle.RectangularMapTest.moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged" />
-        <item itemvalue="Gradle.RectangularMapTest.objectAtReturnsNullIfPositionIsIncorrect" />
-        <item itemvalue="Gradle.SimulationTest.areTheAnimalsHavingCorrectOrderOfCommands" />
+        <item itemvalue="Gradle.GrassFieldTest" />
+        <item itemvalue="Gradle.GrassFieldTest.placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition" />
+        <item itemvalue="Gradle.GrassFieldTest.placeReturnsFalseForNegativePositions" />
+        <item itemvalue="Gradle.GrassFieldTest.placeReturnsTrueForLargeIntsInVector" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +324,7 @@
       <workItem from="1730668947635" duration="343000" />
       <workItem from="1730713263706" duration="30107000" />
       <workItem from="1731498805067" duration="6141000" />
-      <workItem from="1731747920018" duration="8714000" />
+      <workItem from="1731747920018" duration="10507000" />
     </task>
     <servers />
   </component>

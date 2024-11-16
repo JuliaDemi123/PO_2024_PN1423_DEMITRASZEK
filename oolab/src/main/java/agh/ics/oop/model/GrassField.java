@@ -62,7 +62,7 @@ public class GrassField implements WorldMap,MoveValidator
     @Override
     public boolean isOccupied(Vector2d position) // sprawdza tylko dla zwierzaka
     {
-        return animals.containsKey(position);
+        return animals.containsKey(position) || grasses.containsKey(position);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class GrassField implements WorldMap,MoveValidator
     @Override
     public boolean canMoveTo(Vector2d position) // tylko dla zwierzakow
     {
-        return !isOccupied(position);
+        return !animals.containsKey(position);
     }
 
     private Vector2d lowerLeftCorner()
@@ -115,14 +115,14 @@ public class GrassField implements WorldMap,MoveValidator
 
         for ( Vector2d animalPosition : animals.keySet() )
         {
-            maxX = Math.min(animalPosition.getX(),maxX);
-            maxY = Math.min(animalPosition.getY(),maxY);
+            maxX = Math.max(animalPosition.getX(),maxX);
+            maxY = Math.max(animalPosition.getY(),maxY);
         }
 
         for ( Vector2d grassPosition : grasses.keySet() )
         {
-            maxX = Math.min(grassPosition.getX(),maxX);
-            maxY = Math.min(grassPosition.getY(),maxY);
+            maxX = Math.max(grassPosition.getX(),maxX);
+            maxY = Math.max(grassPosition.getY(),maxY);
         }
 
         return new Vector2d(maxX,maxY);
