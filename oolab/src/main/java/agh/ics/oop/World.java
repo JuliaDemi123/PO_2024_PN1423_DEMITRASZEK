@@ -1,5 +1,7 @@
 package agh.ics.oop;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.MapVisualizer;
+
 import java.util.List;
 
 public class World {
@@ -21,12 +23,6 @@ public class World {
     }
     public static void main(String[] args)
     {
-        RectangularMap map = new RectangularMap(4,4);
-        List<MoveDirection> directions = OptionsParser.parse(args);
-        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directions, map);
-        simulation.run();
-
-        Animal a = new Animal(new Vector2d(2,2));
+        GrassField grassfield = new GrassField(10);
     }
 }

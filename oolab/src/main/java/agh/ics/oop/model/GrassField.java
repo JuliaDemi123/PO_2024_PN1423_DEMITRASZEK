@@ -3,23 +3,31 @@ package agh.ics.oop.model;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class GrassField implements WorldMap,MoveValidator
 {
-    private final int numberOfGrassLumps;
+    private final int grassCount;
     private final MapVisualizer mapVisualizer;
-    private final Map<Vector2d,Grass> grassLumps = new HashMap<Vector2d,Grass>();
+    private final Map<Vector2d,Grass> grasses = new HashMap<Vector2d,Grass>();
     private final Map<Vector2d,Animal> animals = new HashMap<Vector2d,Animal>();
 
 
-    public GrassField(int numberOfGrassLumps, MapVisualizer mapVisualizer)
+    public GrassField(int grassCount)
     {
-        this.numberOfGrassLumps = numberOfGrassLumps;
-        this.mapVisualizer = mapVisualizer;
+        this.grassCount = grassCount;
+        this.mapVisualizer = new MapVisualizer(this);
     /*
     tu ma sobie generowac losowo kepki trawowe :) <- w sumie od razu na srebrna skrzynke mozna
     */
+        int maxWidth = (int)Math.ceil(Math.sqrt(grassCount*10));
+        int maxHeight = (int)Math.ceil(Math.sqrt(grassCount*10));
+
+        RandomPositionGenerator randomPositionGenerator = new RandomPositionGenerator(maxWidth, maxHeight, grassCount);
+        for(Vector2d grassPosition : randomPositionGenerator) {
+            grasses.put(grassPosition, new Grass(grassPosition));
+        }
 
     }
 
@@ -64,9 +72,9 @@ public class GrassField implements WorldMap,MoveValidator
         {
             return animals.get(position);
         }
-        else if ( grassLumps.containsKey(position) )
+        else if ( grasses.containsKey(position) )
         {
-            return grassLumps.get(position);
+            return grasses.get(position);
         }
         else
         {
@@ -91,7 +99,7 @@ public class GrassField implements WorldMap,MoveValidator
             minY = Math.min(animalPosition.getY(),minY);
         }
 
-        for ( Vector2d grassPosition : grassLumps.keySet() )
+        for ( Vector2d grassPosition : grasses.keySet() )
         {
             minX = Math.min(grassPosition.getX(),minX);
             minY = Math.min(grassPosition.getY(),minY);
@@ -111,7 +119,7 @@ public class GrassField implements WorldMap,MoveValidator
             maxY = Math.min(animalPosition.getY(),maxY);
         }
 
-        for ( Vector2d grassPosition : grassLumps.keySet() )
+        for ( Vector2d grassPosition : grasses.keySet() )
         {
             maxX = Math.min(grassPosition.getX(),maxX);
             maxY = Math.min(grassPosition.getY(),maxY);
