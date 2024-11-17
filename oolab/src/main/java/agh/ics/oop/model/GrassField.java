@@ -56,7 +56,7 @@ public class GrassField extends AbstractWorldMap
     @Override
     public boolean canMoveTo(Vector2d position) // tylko dla zwierzakow
     {
-        return !animals.containsKey(position);
+        return !animals.containsKey(position) && position.getX() < Integer.MAX_VALUE && position.getY() < Integer.MAX_VALUE;
     }
 
     private Vector2d lowerLeftCorner()
