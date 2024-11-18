@@ -1,5 +1,7 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.MapVisualizer;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
@@ -8,6 +10,7 @@ import java.util.Map;
 public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 {
     protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
+    protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public boolean place(Animal animal)
     {

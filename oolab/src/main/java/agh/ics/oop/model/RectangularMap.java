@@ -12,14 +12,12 @@ public class RectangularMap extends AbstractWorldMap
     private final Vector2d higherRightCornerOfMap;
     private final int width;
     private final int height;
-    private final MapVisualizer mapVisualizer;
 
     public RectangularMap (int width, int height)
     {
         this.width = width-1;
         this.height = height-1;
         higherRightCornerOfMap = new Vector2d(width-1,height-1);
-        mapVisualizer = new MapVisualizer(this);
     }
 
     @Override

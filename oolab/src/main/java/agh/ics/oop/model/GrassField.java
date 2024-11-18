@@ -10,14 +10,12 @@ import java.util.Map;
 public class GrassField extends AbstractWorldMap
 {
     private final int grassCount;
-    private final MapVisualizer mapVisualizer;
     private final Map<Vector2d,Grass> grasses = new HashMap<Vector2d,Grass>();
 
 
     public GrassField(int grassCount)
     {
         this.grassCount = grassCount;
-        this.mapVisualizer = new MapVisualizer(this);
 
         int maxWidth = (int)Math.ceil(Math.sqrt(grassCount*10));
         int maxHeight = (int)Math.ceil(Math.sqrt(grassCount*10));

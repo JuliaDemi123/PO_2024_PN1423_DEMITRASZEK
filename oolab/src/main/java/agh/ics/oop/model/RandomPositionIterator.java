@@ -7,6 +7,8 @@ public class RandomPositionIterator implements Iterator<Vector2d>
 {
     private final RandomPositionGenerator randomPositionGenerator;
     private final Random random = new Random();
+    private int count = 0;
+
     public RandomPositionIterator(RandomPositionGenerator randomPositionGenerator)
     {
         this.randomPositionGenerator = randomPositionGenerator;
@@ -14,14 +16,14 @@ public class RandomPositionIterator implements Iterator<Vector2d>
     @Override
     public boolean hasNext()
     {
-        return randomPositionGenerator.count < randomPositionGenerator.getGrassCount();
+        return count < randomPositionGenerator.getGrassCount();
     }
 
     @Override
     public Vector2d next()
     {
         Vector2d newPosition = generateNewPosition();
-        randomPositionGenerator.count++;
+        count++;
         return newPosition;
     }
 
@@ -34,7 +36,7 @@ public class RandomPositionIterator implements Iterator<Vector2d>
 
         Vector2d newPosition = new Vector2d(randomXPosition, randomYPosition);
 
-        int valToBeSwitched = randomPositionGenerator.positions.get(randomPositionGenerator.positions.size() - 1 - randomPositionGenerator.count);
+        int valToBeSwitched = randomPositionGenerator.positions.get(randomPositionGenerator.positions.size() - 1 - count);
 
         randomPositionGenerator.positions.set(position,valToBeSwitched);
         return newPosition;
