@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class RectangularMapTest
 {
     private final RectangularMap map = new RectangularMap(4,4);
-    private final Vector2d pos1 = new Vector2d(3,3);
-    private final Vector2d pos2 = new Vector2d(0,4);
-    private final Vector2d pos3 = new Vector2d(4,0);
+    private final Vector2d pos1 = new Vector2d(2,2);
+    private final Vector2d pos2 = new Vector2d(0,3);
+    private final Vector2d pos3 = new Vector2d(3,0);
     private final Vector2d pos4 = new Vector2d(0,0);
-    private final Vector2d pos5 = new Vector2d(4,4);
+    private final Vector2d pos5 = new Vector2d(3,3);
 
     @Test
     public void isPlaceCorrectlyAddingAnimalsToMap()
@@ -70,10 +70,10 @@ class RectangularMapTest
     @Test
     public void moveShouldAddAnAnimalToNewPositionInMap()
     {
-        Animal a = new Animal(new Vector2d(3,3));
+        Animal a = new Animal(new Vector2d(2,2));
         map.place(a);
         map.move(a,MoveDirection.FORWARD);
-        assertEquals(map.objectAt(new Vector2d(3,4)),a);
+        assertEquals(map.objectAt(new Vector2d(2,3)),a);
     }
 
     @Test
@@ -103,7 +103,7 @@ class RectangularMapTest
         Animal a1 = new Animal(pos2);
         map.place(a1);
         map.move(a1,MoveDirection.FORWARD);
-        assertEquals(a1.getPosition(),new Vector2d(0,4));
+        assertEquals(a1.getPosition(),new Vector2d(0,3));
     }
 
     @Test
@@ -132,7 +132,7 @@ class RectangularMapTest
         map.place(a1);
         map.move(a1,MoveDirection.RIGHT);
         map.move(a1,MoveDirection.FORWARD);
-        assertEquals(a1.getPosition(),new Vector2d(4,0));
+        assertEquals(a1.getPosition(),new Vector2d(3,0));
     }
 
 }
