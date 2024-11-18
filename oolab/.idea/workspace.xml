@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +314,8 @@
       <workItem from="1730713263706" duration="30107000" />
       <workItem from="1731498805067" duration="6141000" />
       <workItem from="1731747920018" duration="17020000" />
-      <workItem from="1731869063413" duration="42000" />
+      <workItem from="1731869063413" duration="155000" />
+      <workItem from="1731869384067" duration="53000" />
     </task>
     <servers />
   </component>

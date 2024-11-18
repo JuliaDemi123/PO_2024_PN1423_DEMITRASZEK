@@ -30,7 +30,7 @@ public class GrassField extends AbstractWorldMap
     }
 
     @Override
-    public String toString() { return mapVisualizer.draw(lowerLeftCorner(),upperRightCorner()); }
+    public String toString() { return mapVisualizer.draw(getLowerLeftCorner(),getUpperRightCorner()); }
 
     @Override
     public boolean isOccupied(Vector2d position) // sprawdza tylko dla zwierzaka
@@ -59,7 +59,7 @@ public class GrassField extends AbstractWorldMap
         return !animals.containsKey(position) && position.getX() < Integer.MAX_VALUE && position.getY() < Integer.MAX_VALUE;
     }
 
-    private Vector2d lowerLeftCorner()
+    private Vector2d getLowerLeftCorner()
     {
         int minX = Integer.MAX_VALUE;
         int minY = Integer.MAX_VALUE;
@@ -79,7 +79,7 @@ public class GrassField extends AbstractWorldMap
         return new Vector2d(minX,minY);
     }
 
-    private Vector2d upperRightCorner()
+    private Vector2d getUpperRightCorner()
     {
         int maxX = Integer.MIN_VALUE;
         int maxY = Integer.MIN_VALUE;
