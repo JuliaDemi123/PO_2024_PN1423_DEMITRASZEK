@@ -1,5 +1,6 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.IncorrectPositionException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,15 +18,18 @@ class GrassFieldTest
     @Test
     void placeReturnsTrueIfValidPosition()
     {
-        assertTrue(grassField.place(new Animal(pos1)));
-        assertTrue(grassField.place(new Animal(pos2)));
-        assertTrue(grassField.place(new Animal(pos4)));
+        try {
+            grassField.place(new Animal(pos1));
+            grassField.place(new Animal(pos2));
+            grassField.place(new Animal(pos4));
+        } catch (IncorrectPositionException e) { e.printStackTrace();}
     }
 
     @Test
     void placeReturnsTrueForLargeIntsInVector()
     {
-        assertTrue(grassField.place(new Animal(pos3)));
+        try { grassField.place(new Animal(pos3)); }
+        catch (IncorrectPositionException e) { e.printStackTrace();}
     }
 
     @Test

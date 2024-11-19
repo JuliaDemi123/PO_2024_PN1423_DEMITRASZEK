@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.IncorrectPositionException;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -20,11 +21,23 @@ public class Simulation
         for(Vector2d animal : animals)
         {
             Animal a = new Animal(animal);
-            if(map.place(a)) // nie ma innego zwierzaka na tym miejscu
-            {
-                this.animals.add( a );
-                this.animalPositions.add( a.getPosition() );
-            }
+//            if(map.place(a)) // nie ma innego zwierzaka na tym miejscu
+//            {
+//                this.animals.add( a );
+//                this.animalPositions.add( a.getPosition() );
+//            }
+
+             try
+             {
+                 map.place(a); // ?
+                 this.animals.add(a);
+                 this.animalPositions.add(a.getPosition());
+             }
+             catch (IncorrectPositionException e)
+             {
+                 e.printStackTrace();
+             }
+
         }
     }
 

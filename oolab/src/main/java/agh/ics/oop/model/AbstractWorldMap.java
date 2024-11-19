@@ -1,5 +1,6 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.ArrayList;
@@ -12,16 +13,15 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
-    public boolean place(Animal animal)
+    public void place(Animal animal) throws IncorrectPositionException
     {
         if (!canMoveTo(animal.getPosition())) // moze sie znalezc tylko na mapie, a nie poza nia, i zwierze nie moze sie znajdowac na zajetym juz polu
         {
-            return false;
+            throw new IncorrectPositionException(animal.getPosition());
         }
         else
         {
             animals.put(animal.getPosition(), animal);
-            return true;
         }
     }
 
