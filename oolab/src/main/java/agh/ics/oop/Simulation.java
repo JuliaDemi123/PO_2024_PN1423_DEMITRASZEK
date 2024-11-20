@@ -20,13 +20,7 @@ public class Simulation
         this.map = map;
         for(Vector2d animal : animals)
         {
-            Animal a = new Animal(animal);
-//            if(map.place(a)) // nie ma innego zwierzaka na tym miejscu
-//            {
-//                this.animals.add( a );
-//                this.animalPositions.add( a.getPosition() );
-//            }
-
+             Animal a = new Animal(animal);
              try
              {
                  map.place(a); // ?
@@ -48,7 +42,6 @@ public class Simulation
         {
             map.move( animals.get(ind) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
             animalPositions.set(ind,animals.get(ind).getPosition());
-            System.out.println(map.toString());
             ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
         }
 
