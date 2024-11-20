@@ -28,9 +28,6 @@ public class GrassField extends AbstractWorldMap
     }
 
     @Override
-    public String toString() { return mapVisualizer.draw(getLowerLeftCorner(),getUpperRightCorner()); }
-
-    @Override
     public boolean isOccupied(Vector2d position) // sprawdza tylko dla zwierzaka
     {
         return super.isOccupied(position) || grasses.containsKey(position);
@@ -49,6 +46,11 @@ public class GrassField extends AbstractWorldMap
         {
             return elem;
         }
+    }
+
+    @Override
+    public Boundary getCurrentBounds() {
+        return new Boundary(getLowerLeftCorner(),getUpperRightCorner());
     }
 
     @Override

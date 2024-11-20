@@ -1,5 +1,6 @@
 package agh.ics.oop;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.List;
@@ -26,10 +27,13 @@ public class World {
         Vector2d pos1 = new Vector2d(-1,-1);
         Vector2d pos2 = new Vector2d(1,4);
         GrassField grassfield = new GrassField(10);
-        grassfield.place(new Animal(pos1));
-        grassfield.place(new Animal(pos2));
-        System.out.println(grassfield.toString());
-
-        List<WorldElement> list = grassfield.getElements();
+        try
+        {
+            grassfield.place(new Animal(pos1));
+            grassfield.place(new Animal(pos2));
+            System.out.println(grassfield.toString());
+            List<WorldElement> list = grassfield.getElements();
+        }
+        catch (IncorrectPositionException e) { e.printStackTrace();}
     }
 }

@@ -3,15 +3,13 @@ package agh.ics.oop.model;
 import agh.ics.oop.model.util.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 {
     protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
+    List<MapChangeListener> mapChangeListeners = new ArrayList<>();
 
     public void place(Animal animal) throws IncorrectPositionException
     {
@@ -23,6 +21,14 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         {
             animals.put(animal.getPosition(), animal);
         }
+    }
+
+    public abstract Boundary getCurrentBounds();
+
+    public String toString()
+    {
+        Boundary boundary = getCurrentBounds();
+        return mapVisualizer.draw(boundary.lowerLeftCorner(), boundary.upperRightCorner());
     }
 
     public abstract boolean canMoveTo(Vector2d position);
@@ -41,10 +47,27 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         animals.put(animal.getPosition(), animal);
     }
 
-    public abstract String toString();
-
     public List<WorldElement> getElements()
     {
         return new ArrayList<>(animals.values());
     }
+
+    public void addMapChangeListener(MapChangeListener listener)
+    {
+        mapChangeListeners.add(listener);
+    }
+
+    public void removeMapChangeListener(MapChangeListener listener)
+    {
+        mapChangeListeners.remove(listener);
+    }
+
+    private void mapChanged(String message)
+    {
+        for (MapChangeListener listener : mapChangeListeners)
+        {
+            listener.mapChanged(this, message);
+        }
+    }
+
 }

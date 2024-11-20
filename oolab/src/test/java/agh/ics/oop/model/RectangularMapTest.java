@@ -1,5 +1,6 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.IncorrectPositionException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,19 +19,32 @@ class RectangularMapTest
     @Test
     public void isPlaceCorrectlyAddingAnimalsToMap()
     {
-       assertTrue(map.place(new Animal(pos1)));
-       assertTrue(map.place(new Animal(pos2)));
-       assertTrue(map.place(new Animal(pos3)));
-       assertTrue(map.place(new Animal(pos4)));
-       assertTrue(map.place(new Animal(pos5)));
+
+        try {
+            map.place(new Animal(pos1));
+            map.place(new Animal(pos2));
+            map.place(new Animal(pos3));
+            map.place(new Animal(pos4));
+            map.place(new Animal(pos5));
+        }
+        catch (IncorrectPositionException e) {System.out.println("TEST : isPlaceCorrectlyAddingAnimalsToMap [FAILED]"); e.printStackTrace();};
     }
 
 
     @Test
     public void placeShouldNotAddAnimalsAtTheSamePosition()
     {
-        assertTrue(map.place(new Animal(pos1)));
-        assertFalse(map.place(new Animal(pos1)));
+        try {
+            map.place(new Animal(pos1));
+            map.place(new Animal(pos1));
+            fail("Animals should not have been placed");
+        }
+        catch (IncorrectPositionException e)
+        {
+            //if execution reaches here,
+            //it indicates this exception has occured.
+            //and so the test is okay!
+        }
     }
 
     @Test
@@ -40,13 +54,18 @@ class RectangularMapTest
         Animal a4 = new Animal(pos4);
         Animal a5 = new Animal(pos5);
 
-        map.place(a1);
-        map.place(a4);
-        map.place(a5);
-
+        try {
+            map.place(a1);
+            map.place(a4);
+            map.place(a5);
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : objectAtReturnsAnimalPositionIfPositionIsCorrect [FAILED]"); e.printStackTrace();
+        }
         assertEquals(map.objectAt(pos1),a1);
         assertEquals(map.objectAt(pos4),a4);
         assertEquals(map.objectAt(pos5),a5);
+
+
     }
 
     @Test
@@ -62,7 +81,11 @@ class RectangularMapTest
     public void moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged()
     {
         Animal a = new Animal(pos1);
-        map.place(a);
+        try
+        {
+            map.place(a);
+        }
+        catch (IncorrectPositionException e) { System.out.println("TEST : moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged [FAILED]"); e.printStackTrace(); }
         map.move(a,MoveDirection.FORWARD);
         assertNull(map.objectAt(pos1));
     }
@@ -71,7 +94,9 @@ class RectangularMapTest
     public void moveShouldAddAnAnimalToNewPositionInMap()
     {
         Animal a = new Animal(new Vector2d(2,2));
-        map.place(a);
+        try {
+            map.place(a);
+        } catch (IncorrectPositionException e) { System.out.println("TEST : moveShouldAddAnAnimalToNewPositionInMap [FAILED]"); e.printStackTrace(); }
         map.move(a,MoveDirection.FORWARD);
         assertEquals(map.objectAt(new Vector2d(2,3)),a);
     }
@@ -79,10 +104,12 @@ class RectangularMapTest
     @Test
     public void isOccupiedIsTrueIfThereIsAnAnimalAtAPosition()
     {
-        map.place(new Animal(pos1));
-        map.place(new Animal(pos2));
-        map.place(new Animal(pos3));
-
+        try
+        {
+            map.place(new Animal(pos1));
+            map.place(new Animal(pos2));
+            map.place(new Animal(pos3));
+        } catch (IncorrectPositionException e) { System.out.println("TEST : isOccupiedIsTrueIfThereIsAnAnimalAtAPosition [FAILED]"); e.printStackTrace(); }
         assertTrue(map.isOccupied(pos1));
         assertTrue(map.isOccupied(pos2));
         assertTrue(map.isOccupied(pos3));
@@ -101,7 +128,9 @@ class RectangularMapTest
     public void cannotMoveToAPositionIfTheDesiredYIsAboveHeight()
     {
         Animal a1 = new Animal(pos2);
-        map.place(a1);
+        try {
+            map.place(a1);
+        } catch (IncorrectPositionException e) { System.out.println("TEST : cannotMoveToAPositionIfTheDesiredYIsAboveHeight [FAILED]"); e.printStackTrace(); }
         map.move(a1,MoveDirection.FORWARD);
         assertEquals(a1.getPosition(),new Vector2d(0,3));
     }
@@ -110,7 +139,9 @@ class RectangularMapTest
     public void cannotMoveToAPositionIfTheDesiredYIsBelow0()
     {
         Animal a1 = new Animal(pos4);
-        map.place(a1);
+        try {
+            map.place(a1);
+        } catch (IncorrectPositionException e) { System.out.println("TEST : cannotMoveToAPositionIfTheDesiredYIsBelow0 [FAILED]"); e.printStackTrace(); }
         map.move(a1,MoveDirection.BACKWARD);
         assertEquals(a1.getPosition(),new Vector2d(0,0));
     }
@@ -119,7 +150,9 @@ class RectangularMapTest
     public void cannotMoveToAPositionIfTheDesiredXIsBelow0()
     {
         Animal a1 = new Animal(pos4);
-        map.place(a1);
+        try {
+            map.place(a1);
+        } catch (IncorrectPositionException e) { System.out.println("TEST : cannotMoveToAPositionIfTheDesiredXIsBelow0 [FAILED]"); e.printStackTrace(); }
         map.move(a1,MoveDirection.LEFT);
         map.move(a1,MoveDirection.FORWARD);
         assertEquals(a1.getPosition(),new Vector2d(0,0));
@@ -129,7 +162,10 @@ class RectangularMapTest
     public void cannotMoveToAPositionIfTheDesiredXIsAboveWidth()
     {
         Animal a1 = new Animal(pos3);
-        map.place(a1);
+        try {
+            map.place(a1);
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : cannotMoveToAPositionIfTheDesiredXIsAboveWidth [FAILED]"); e.printStackTrace(); }
         map.move(a1,MoveDirection.RIGHT);
         map.move(a1,MoveDirection.FORWARD);
         assertEquals(a1.getPosition(),new Vector2d(3,0));

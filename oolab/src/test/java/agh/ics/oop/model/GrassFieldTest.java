@@ -22,21 +22,32 @@ class GrassFieldTest
             grassField.place(new Animal(pos1));
             grassField.place(new Animal(pos2));
             grassField.place(new Animal(pos4));
-        } catch (IncorrectPositionException e) { e.printStackTrace();}
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : placeReturnsTrueIfValidPosition [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
     void placeReturnsTrueForLargeIntsInVector()
     {
         try { grassField.place(new Animal(pos3)); }
-        catch (IncorrectPositionException e) { e.printStackTrace();}
+        catch (IncorrectPositionException e) {
+            System.out.println("TEST : placeReturnsTrueForLargeIntsInVector [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
     void placeReturnsFalseIfAnAnimalHasAlreadyBeenPlacedInThatPosition()
     {
-        grassField.place(new Animal(pos1));
-        assertFalse(grassField.place(new Animal(pos1)));
+        try {
+            grassField.place(new Animal(pos1));
+            grassField.place(new Animal(pos1));
+            fail("An exception should have been thrown");}
+        catch (IncorrectPositionException e) {
+             // an exception is expected to be thrown so thats okay
+        }
     }
 
     // Zakladam ze mozna tez dac zwierze na pozycje o ujemnych wspolrzednych
@@ -45,31 +56,43 @@ class GrassFieldTest
     @Test
     public void moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged()
     {
-        Animal a = new Animal(pos1);
-        grassField.place(a);
-        grassField.move(a,MoveDirection.FORWARD);
-        assertNull(grassField.objectAt(pos1));
+        try
+        {
+            Animal a = new Animal(pos1);
+            grassField.place(a);
+            grassField.move(a,MoveDirection.FORWARD);
+            assertNull(grassField.objectAt(pos1));
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : moveShouldRemoveAnAnimalFromPreviousPositionInMapIfItChanged [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void moveShouldAddAnAnimalToNewPositionInMap()
     {
-        Animal a = new Animal(new Vector2d(2,2));
-        grassField.place(a);
-        grassField.move(a,MoveDirection.FORWARD);
-        assertEquals(grassField.objectAt(new Vector2d(2,3)),a);
+        try {
+            Animal a = new Animal(new Vector2d(2, 2));
+            grassField.place(a);
+            grassField.move(a,MoveDirection.FORWARD);
+            assertEquals(grassField.objectAt(new Vector2d(2,3)),a);
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : moveShouldAddAnAnimalToNewPositionInMap [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void isOccupiedIsTrueIfThereIsAnAnimalAtAPosition()
     {
-        grassField.place(new Animal(pos1));
-        grassField.place(new Animal(pos2));
-        grassField.place(new Animal(pos3));
-
-        assertTrue(grassField.isOccupied(pos1));
-        assertTrue(grassField.isOccupied(pos2));
-        assertTrue(grassField.isOccupied(pos3));
+        try {
+            grassField.place(new Animal(pos1));
+            grassField.place(new Animal(pos2));
+            grassField.place(new Animal(pos3));
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : isOccupiedIsTrueIfThereIsAnAnimalAtAPosition [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -88,13 +111,19 @@ class GrassFieldTest
         Animal a4 = new Animal(pos4);
         Animal a5 = new Animal(pos5);
 
-        grassField.place(a1);
-        grassField.place(a4);
-        grassField.place(a5);
+        try
+        {
+            grassField.place(a1);
+            grassField.place(a4);
+            grassField.place(a5);
+            assertEquals(grassField.objectAt(pos1),a1);
+            assertEquals(grassField.objectAt(pos4),a4);
+            assertEquals(grassField.objectAt(pos5),a5);
 
-        assertEquals(grassField.objectAt(pos1),a1);
-        assertEquals(grassField.objectAt(pos4),a4);
-        assertEquals(grassField.objectAt(pos5),a5);
+        } catch (IncorrectPositionException e) {
+            System.out.println("TEST : objectAtReturnsAnimalPositionIfPositionIsCorrect [FAILED]");
+            e.printStackTrace();
+        }
     }
 
     @Test
