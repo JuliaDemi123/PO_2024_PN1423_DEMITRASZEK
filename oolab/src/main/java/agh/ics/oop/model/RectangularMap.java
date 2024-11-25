@@ -3,7 +3,7 @@ package agh.ics.oop.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import agh.ics.oop.model.util.IncorrectPositionException;
+import agh.ics.oop.model.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 // implements WorldMap,MoveValidator
@@ -20,6 +20,7 @@ public class RectangularMap extends AbstractWorldMap
         this.width = width-1;
         this.height = height-1;
         higherRightCornerOfMap = new Vector2d(width-1,height-1);
+        increaseId();
     }
 
     @Override

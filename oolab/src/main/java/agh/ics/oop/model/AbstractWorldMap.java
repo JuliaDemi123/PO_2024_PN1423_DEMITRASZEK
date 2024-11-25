@@ -1,6 +1,6 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.model.util.IncorrectPositionException;
+import agh.ics.oop.model.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.*;
@@ -10,6 +10,8 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
     private final List<MapChangeListener> mapChangeListeners = new ArrayList<>();
+    private static int nextMapId = 0;
+    protected final int currentId = nextMapId;
 
     public void place(Animal animal) throws IncorrectPositionException
     {
@@ -72,4 +74,12 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         }
     }
 
+    public int getId() {
+        return currentId;
+    }
+
+    protected void increaseId()
+    {
+        nextMapId++;
+    }
 }

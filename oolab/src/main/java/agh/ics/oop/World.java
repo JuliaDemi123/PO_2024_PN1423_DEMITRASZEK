@@ -1,6 +1,6 @@
 package agh.ics.oop;
 import agh.ics.oop.model.*;
-import agh.ics.oop.model.util.IncorrectPositionException;
+import agh.ics.oop.model.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.List;

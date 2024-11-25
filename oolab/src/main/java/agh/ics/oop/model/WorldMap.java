@@ -2,7 +2,7 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
-import agh.ics.oop.model.util.IncorrectPositionException;
+import agh.ics.oop.model.IncorrectPositionException;
 
 /**
  * The interface responsible for interacting with the map of the world.
@@ -43,4 +43,6 @@ public interface WorldMap extends MoveValidator {
      * @return animal or null if the position is not occupied.
      */
     WorldElement objectAt(Vector2d position);
+
+    int getId();
 }
