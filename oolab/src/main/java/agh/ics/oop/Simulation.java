@@ -27,10 +27,7 @@ public class Simulation
                  this.animals.add(a);
                  this.animalPositions.add(a.getPosition());
              }
-             catch (IncorrectPositionException e)
-             {
-                 e.printStackTrace();
-             }
+             catch (IncorrectPositionException e) {} // zwierze nie zostalo dodane, swiadoma decyzja ze w catchu nic nie ma
 
         }
     }

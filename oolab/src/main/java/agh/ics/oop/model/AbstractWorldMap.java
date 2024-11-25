@@ -9,7 +9,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 {
     protected final Map<Vector2d, Animal> animals = new HashMap<>(); //
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
-    List<MapChangeListener> mapChangeListeners = new ArrayList<>();
+    private final List<MapChangeListener> mapChangeListeners = new ArrayList<>();
 
     public void place(Animal animal) throws IncorrectPositionException
     {
@@ -68,7 +68,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     {
         for (MapChangeListener listener : mapChangeListeners)
         {
-            listener.mapChanged(this, message);
+            listener.notifyListeners(this, message);
         }
     }
 
