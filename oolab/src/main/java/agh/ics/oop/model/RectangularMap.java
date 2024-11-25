@@ -2,6 +2,8 @@ package agh.ics.oop.model;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import agh.ics.oop.model.util.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 // implements WorldMap,MoveValidator
@@ -21,15 +23,14 @@ public class RectangularMap extends AbstractWorldMap
     }
 
     @Override
-    public boolean place(Animal animal)
+    public void place(Animal animal) throws IncorrectPositionException
     {
-        return super.place(animal);
+        super.place(animal);
     }
 
     @Override
-    public String toString()
-    {
-        return mapVisualizer.draw(lowerLeftCornerOfMap, higherRightCornerOfMap);
+    public Boundary getCurrentBounds() {
+        return new Boundary(lowerLeftCornerOfMap, higherRightCornerOfMap);
     }
 
     @Override
