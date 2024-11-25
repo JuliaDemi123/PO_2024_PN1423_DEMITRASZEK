@@ -1,7 +1,6 @@
 package agh.ics.oop;
-
+import java.util.Arrays;
 import agh.ics.oop.model.MoveDirection;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -30,3 +29,4 @@ public class OptionsParser {
         return movement;
     }
 }
+
