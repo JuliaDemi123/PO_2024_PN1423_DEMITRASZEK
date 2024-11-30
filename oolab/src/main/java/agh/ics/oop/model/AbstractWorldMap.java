@@ -11,7 +11,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
     private final List<MapChangeListener> mapChangeListeners = new ArrayList<>();
     private static int nextMapId = 0;
-    protected final int currentId = nextMapId;
+    private final int currentId = nextMapId;
 
     public void place(Animal animal) throws IncorrectPositionException
     {

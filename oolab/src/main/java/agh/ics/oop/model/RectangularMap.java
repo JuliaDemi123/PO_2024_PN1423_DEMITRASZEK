@@ -14,13 +14,15 @@ public class RectangularMap extends AbstractWorldMap
     private final Vector2d higherRightCornerOfMap;
     private final int width;
     private final int height;
+    private final Boundary boundary;
 
     public RectangularMap (int width, int height)
     {
         this.width = width-1;
         this.height = height-1;
         higherRightCornerOfMap = new Vector2d(width-1,height-1);
-        increaseId();
+        boundary = new Boundary(lowerLeftCornerOfMap,higherRightCornerOfMap);
+        super.increaseId();
     }
 
     @Override
@@ -31,7 +33,7 @@ public class RectangularMap extends AbstractWorldMap
 
     @Override
     public Boundary getCurrentBounds() {
-        return new Boundary(lowerLeftCornerOfMap, higherRightCornerOfMap);
+        return boundary;
     }
 
     @Override
