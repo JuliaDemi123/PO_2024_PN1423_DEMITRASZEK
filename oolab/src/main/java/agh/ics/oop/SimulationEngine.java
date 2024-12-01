@@ -12,6 +12,7 @@ public class SimulationEngine
     private final List<Simulation> simulationList;
     private final List<Thread> threads = new ArrayList<>();
     private final ExecutorService threadPool = Executors.newFixedThreadPool(4);
+    private CountDownLatch countDownLatch;
 
     public SimulationEngine(List<Simulation> simulationList)
     {
@@ -28,11 +29,13 @@ public class SimulationEngine
 
     public void runAsync()
     {
+        countDownLatch = new CountDownLatch(simulationList.size());
         for (Simulation simulation : simulationList)
         {
             Thread simulationThread = new Thread(simulation);
             threads.add(simulationThread);
             threads.getLast().start();
+            countDownLatch.countDown();
         }
     }
 
@@ -49,6 +52,10 @@ public class SimulationEngine
     public void awaitSimulationsEnd()
     {
         try {
+            if (countDownLatch != null)
+            {
+                countDownLatch.await();
+            }
             for (Thread thread : threads)
             {
                 thread.join(); // program nie zakonczy sie gdy glowny watek skonczy prace tylko pozostale do niego dolacza
