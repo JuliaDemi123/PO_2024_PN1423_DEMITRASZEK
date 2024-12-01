@@ -3,12 +3,15 @@ package agh.ics.oop;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class SimulationEngine
 {
     private final List<Simulation> simulationList;
     private final List<Thread> threads = new ArrayList<>();
-    private CountDownLatch latch;
+    private final ExecutorService threadPool = Executors.newFixedThreadPool(4);
 
     public SimulationEngine(List<Simulation> simulationList)
     {
@@ -25,28 +28,35 @@ public class SimulationEngine
 
     public void runAsync()
     {
-        latch = new CountDownLatch(simulationList.size());
         for (Simulation simulation : simulationList)
         {
-            try
-            {
-                Thread simulationThread = new Thread(simulation);
-                threads.add(simulationThread);
-                threads.getLast().start();
-                latch.countDown();
-            } catch (Exception e)
-            {
-                System.out.println("An error with a threads creation");
-            }
-            latch.countDown();
+            Thread simulationThread = new Thread(simulation);
+            threads.add(simulationThread);
+            threads.getLast().start();
         }
     }
+
+    public void runAsyncInThreadPool()
+    {
+        for (Simulation simulation : simulationList)
+        {
+        threadPool.submit(simulation);
+        }
+    }
+
+
 
     public void awaitSimulationsEnd()
     {
         try {
-            if (latch != null) {
-                latch.await(); // Czeka na zakończenie wszystkich symulacji
+            for (Thread thread : threads)
+            {
+                thread.join(); // program nie zakonczy sie gdy glowny watek skonczy prace tylko pozostale do niego dolacza
+            }
+            threadPool.shutdown();
+            if (!threadPool.awaitTermination(10, TimeUnit.SECONDS))
+            {
+                threadPool.shutdownNow();
             }
         }
         catch (InterruptedException e) { e.printStackTrace(); }

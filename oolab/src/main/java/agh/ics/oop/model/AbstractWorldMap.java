@@ -28,7 +28,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 
     public abstract Boundary getCurrentBounds();
 
-    public String toString()
+    public synchronized String toString()
     {
         Boundary boundary = getCurrentBounds();
         return mapVisualizer.draw(boundary.lowerLeftCorner(), boundary.upperRightCorner());
@@ -74,11 +74,11 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         }
     }
 
-    public int getId() {
+    public synchronized int getId() {
         return currentId;
     }
 
-    protected void increaseId()
+    protected synchronized void increaseId()
     {
         nextMapId++;
     }

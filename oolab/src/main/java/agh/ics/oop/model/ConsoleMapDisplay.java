@@ -1,15 +1,15 @@
 package agh.ics.oop.model;
 
-public class ConsoleMapDisplay implements MapChangeListener
-{
+public class ConsoleMapDisplay implements MapChangeListener {
     private int numberOfChanges = 0;
+
     @Override
-    public void notifyListeners(WorldMap worldMap, String message)
-    {
-        System.out.println(message);
-        System.out.println(worldMap.toString());
-        numberOfChanges++;
-        System.out.println("Number of operations: " + numberOfChanges);
-        System.out.println("Map id: " + worldMap.getId());
+    public synchronized void notifyListeners(WorldMap worldMap, String message) {
+            System.out.println(message);
+            System.out.println(worldMap.toString());
+            numberOfChanges++;
+            System.out.println("Number of operations: " + numberOfChanges);
+            System.out.println("Map id: " + worldMap.getId());
     }
 }
+

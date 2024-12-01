@@ -37,18 +37,20 @@ public class World {
         try {
             List<MoveDirection> movements = OptionsParser.parse(new String[]{"f", "f", "l", "r", "b", "r", "l", "l", "r", "b", "b", "f", "r"});
 
-            RectangularMap map1 = new RectangularMap(5, 5);
-            GrassField map2 = new GrassField(10);
+            for (int i = 0; i < 1000; ++i) {
+                RectangularMap map1 = new RectangularMap(5, 5);
+                GrassField map2 = new GrassField(5);
 
-            Simulation sim1 = new Simulation(animals, movements, map1);
-            Simulation sim2 = new Simulation(animals, movements, map2);
+                Simulation sim1 = new Simulation(animals, movements, map1);
+                Simulation sim2 = new Simulation(animals, movements, map2);
 
-            map1.addMapChangeListener(new ConsoleMapDisplay());
-            map2.addMapChangeListener(new ConsoleMapDisplay());
+                map1.addMapChangeListener(new ConsoleMapDisplay());
+                map2.addMapChangeListener(new ConsoleMapDisplay());
 
-            SimulationEngine simulationEngine = new SimulationEngine(List.of(sim1, sim2));
-            simulationEngine.runAsync();
-            simulationEngine.awaitSimulationsEnd();
+                SimulationEngine simulationEngine = new SimulationEngine(List.of(sim1, sim2));
+                simulationEngine.runAsyncInThreadPool();
+                simulationEngine.awaitSimulationsEnd();
+            }
 
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
