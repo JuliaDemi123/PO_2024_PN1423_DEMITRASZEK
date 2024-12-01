@@ -48,17 +48,16 @@ public class SimulationEngine
     }
 
 
-
     public void awaitSimulationsEnd()
     {
         try {
-            if (countDownLatch != null)
-            {
-                countDownLatch.await();
-            }
             for (Thread thread : threads)
             {
                 thread.join(); // program nie zakonczy sie gdy glowny watek skonczy prace tylko pozostale do niego dolacza
+            }
+            if (countDownLatch != null)
+            {
+                countDownLatch.await();
             }
             threadPool.shutdown();
             if (!threadPool.awaitTermination(10, TimeUnit.SECONDS))

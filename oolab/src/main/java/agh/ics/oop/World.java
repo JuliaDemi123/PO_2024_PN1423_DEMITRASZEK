@@ -33,7 +33,7 @@ public class World {
 //        try { map1.place(animal1); map2.place(animal1);}
 //        catch (IncorrectPositionException e) { e.printStackTrace();}
         List<Vector2d> animals = List.of(new Vector2d(0, 1), new Vector2d(2, 2), new Vector2d(4, 2));
-
+        ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
         try {
             List<MoveDirection> movements = OptionsParser.parse(new String[]{"f", "f", "l", "r", "b", "r", "l", "l", "r", "b", "b", "f", "r"});
 
@@ -44,8 +44,8 @@ public class World {
                 Simulation sim1 = new Simulation(animals, movements, map1);
                 Simulation sim2 = new Simulation(animals, movements, map2);
 
-                map1.addMapChangeListener(new ConsoleMapDisplay());
-                map2.addMapChangeListener(new ConsoleMapDisplay());
+                map1.addMapChangeListener(consoleMapDisplay);
+                map2.addMapChangeListener(consoleMapDisplay);
 
                 SimulationEngine simulationEngine = new SimulationEngine(List.of(sim1, sim2));
                 simulationEngine.runAsyncInThreadPool();
