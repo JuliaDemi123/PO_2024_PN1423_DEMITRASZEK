@@ -47,10 +47,12 @@ public class World {
             map2.addMapChangeListener(new ConsoleMapDisplay());
 
             SimulationEngine simulationEngine = new SimulationEngine(List.of(sim1, sim2));
-            simulationEngine.runSync();
+            simulationEngine.runAsync();
+            simulationEngine.awaitSimulationsEnd();
 
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
+        System.out.println("System zakończył działanie");
     }
 }

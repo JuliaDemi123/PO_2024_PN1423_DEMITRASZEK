@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Simulation
+public class Simulation implements Runnable
 {
     private final List<Animal> animals = new ArrayList<>();
     private final List<Vector2d> animalPositions = new ArrayList<>();
