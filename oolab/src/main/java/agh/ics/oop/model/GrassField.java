@@ -24,11 +24,8 @@ public class GrassField extends AbstractWorldMap
         for(Vector2d grassPosition : randomPositionGenerator) {
             grasses.put(grassPosition, new Grass(grassPosition));
         }
-
+        super.increaseId();
     }
-
-    @Override
-    public String toString() { return mapVisualizer.draw(getLowerLeftCorner(),getUpperRightCorner()); }
 
     @Override
     public boolean isOccupied(Vector2d position) // sprawdza tylko dla zwierzaka
@@ -52,9 +49,14 @@ public class GrassField extends AbstractWorldMap
     }
 
     @Override
+    public Boundary getCurrentBounds() {
+        return new Boundary(getLowerLeftCorner(),getUpperRightCorner());
+    }
+
+    @Override
     public boolean canMoveTo(Vector2d position) // tylko dla zwierzakow
     {
-        return !animals.containsKey(position) && position.getX() < Integer.MAX_VALUE && position.getY() < Integer.MAX_VALUE;
+        return !animals.containsKey(position);
     }
 
     private Vector2d getLowerLeftCorner()
@@ -103,4 +105,5 @@ public class GrassField extends AbstractWorldMap
         elementList.addAll((grasses.values()));
         return elementList;
     }
+
 }

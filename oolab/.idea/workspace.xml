@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3acd3a2d-c76e-433d-8ba1-03cd1052d308" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/ConsoleMapDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/ConsoleMapDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapChangeListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +55,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -128,8 +137,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab5&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab7&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/JULA/Desktop/po/PO_2024_PN1423_DEMITRASZEK/oolab/src/main/java/agh/ics/oop/model&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -189,7 +199,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionsParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -202,7 +212,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest&quot;" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,7 +223,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -226,7 +236,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap&quot;" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -237,7 +247,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,7 +260,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest&quot;" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -276,18 +286,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap" />
+      <item itemvalue="Gradle.OptionsParserTest" />
+      <item itemvalue="Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray" />
+      <item itemvalue="Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray" />
       <item itemvalue="Gradle.GrassFieldTest" />
-      <item itemvalue="Gradle.SimulationTest" />
-      <item itemvalue="Gradle.RectangularMapTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SimulationTest" />
-        <item itemvalue="Gradle.RectangularMapTest" />
-        <item itemvalue="Gradle.GrassFieldTest" />
+        <item itemvalue="Gradle.OptionsParserTest.doTheRightDirectionsGiveTheCorrectArray" />
+        <item itemvalue="Gradle.OptionsParserTest" />
         <item itemvalue="Application.World" />
-        <item itemvalue="Gradle.RectangularMapTest.moveShouldAddAnAnimalToNewPositionInMap" />
+        <item itemvalue="Gradle.OptionsParserTest.doSomeStringArraysWithErrorsGiveTheCorrectArray" />
+        <item itemvalue="Gradle.GrassFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -323,6 +333,16 @@
       <workItem from="1731869063413" duration="155000" />
       <workItem from="1731869384067" duration="53000" />
       <workItem from="1731928043627" duration="499000" />
+      <workItem from="1731932830291" duration="7934000" />
+      <workItem from="1732043250519" duration="8234000" />
+      <workItem from="1732105733329" duration="4472000" />
+      <workItem from="1732129427499" duration="645000" />
+      <workItem from="1732203985965" duration="36000" />
+      <workItem from="1732554925431" duration="7000" />
+      <workItem from="1732554944778" duration="23000" />
+      <workItem from="1732984931921" duration="7917000" />
+      <workItem from="1733062178991" duration="755000" />
+      <workItem from="1733142134389" duration="1212000" />
     </task>
     <servers />
   </component>

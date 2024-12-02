@@ -1,6 +1,8 @@
 package agh.ics.oop;
-import java.util.Arrays;
+
 import agh.ics.oop.model.MoveDirection;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,20 +13,20 @@ import java.util.List;
 
 
 public class OptionsParser {
-    public static List<MoveDirection> parse(String[] directions)
+    public static List<MoveDirection> parse(String[] directions) throws IllegalArgumentException
     {
         List<MoveDirection> movement = new ArrayList<MoveDirection>();
         for (String direction : directions)
         {
             switch (direction)
             {
-                case "f" -> {movement.add(MoveDirection.FORWARD);}
-                case "b" -> {movement.add(MoveDirection.BACKWARD);}
-                case "r" -> {movement.add(MoveDirection.RIGHT);}
-                case "l" -> {movement.add(MoveDirection.LEFT);}
+                case "f", "forward" -> {movement.add(MoveDirection.FORWARD);}
+                case "b", "backward" -> {movement.add(MoveDirection.BACKWARD);}
+                case "r", "right" -> {movement.add(MoveDirection.RIGHT);}
+                case "l", "left" -> {movement.add(MoveDirection.LEFT);}
+                default -> {throw new IllegalArgumentException(direction + " is not legal move specification");}
             }
         }
         return movement;
     }
 }
-

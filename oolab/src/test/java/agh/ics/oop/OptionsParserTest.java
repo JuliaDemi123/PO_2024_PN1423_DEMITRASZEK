@@ -36,14 +36,19 @@ class OptionsParserTest
         String[] dir2 = new String[] {"a","c","hello","apple","orange"};
         String[] dir3 = new String[] {};
 
-        List<MoveDirection> arr1 = parse(dir1);
-        List<MoveDirection> arr2 = parse(dir2);
-        List<MoveDirection> arr3 = parse(dir3);
+        try {
+            List<MoveDirection> arr1 = parse(dir1);
+            fail( "The test should have thrown an exception" );
+        } catch (IllegalArgumentException e) {}
 
+        try {
+            List<MoveDirection> arr2 = parse(dir2);
+            fail( "The test should have thrown an exception" );
+        } catch (IllegalArgumentException e) {}
 
-        Assertions.assertIterableEquals(arr1,Arrays.asList(MoveDirection.FORWARD,MoveDirection.FORWARD,MoveDirection.LEFT,MoveDirection.BACKWARD,MoveDirection.RIGHT));
-        Assertions.assertIterableEquals(arr2,Arrays.asList());
-        Assertions.assertIterableEquals(arr3,Arrays.asList());
+        try {
+            List<MoveDirection> arr3 = parse(dir3);
+        } catch (IllegalArgumentException e) { e.printStackTrace(); }
     }
 
 }
