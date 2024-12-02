@@ -25,13 +25,6 @@ public class World {
 
     public static void main(String[] args) {
         ConsoleMapDisplay consoleMap = new ConsoleMapDisplay();
-//        RectangularMap map1 = new RectangularMap(5,5);
-//        GrassField map2 = new GrassField(10);
-//        map1.addMapChangeListener(consoleMap);
-//        map2.addMapChangeListener(consoleMap);
-//        Animal animal1 = new Animal();
-//        try { map1.place(animal1); map2.place(animal1);}
-//        catch (IncorrectPositionException e) { e.printStackTrace();}
         List<Vector2d> animals = List.of(new Vector2d(0, 1), new Vector2d(2, 2), new Vector2d(4, 2));
         ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
         try {
