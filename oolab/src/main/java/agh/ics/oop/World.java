@@ -37,7 +37,7 @@ public class World {
         try {
             List<MoveDirection> movements = OptionsParser.parse(new String[]{"f", "f", "l", "r", "b", "r", "l", "l", "r", "b", "b", "f", "r"});
 
-            for (int i = 0; i < 1000; ++i) {
+            for (int i = 0; i < 100; ++i) {
                 RectangularMap map1 = new RectangularMap(5, 5);
                 GrassField map2 = new GrassField(5);
 

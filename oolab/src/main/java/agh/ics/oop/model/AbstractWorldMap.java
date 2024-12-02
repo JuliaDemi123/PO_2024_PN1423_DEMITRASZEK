@@ -22,7 +22,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         else
         {
             animals.put(animal.getPosition(), animal);
-            mapChanged("An animal placed at " + animal.getPosition());
+            notifyListeners("An animal placed at " + animal.getPosition());
         }
     }
 
@@ -48,7 +48,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         animals.remove(animal.getPosition());
         animal.move(direction, this);
         animals.put(animal.getPosition(), animal);
-        mapChanged("An animal moved to " + animal.getPosition());
+        notifyListeners("An animal moved to " + animal.getPosition());
     }
 
     public List<WorldElement> getElements()
@@ -66,20 +66,23 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         mapChangeListeners.remove(listener);
     }
 
-    private void mapChanged(String message)
+    private void notifyListeners(String message)
     {
         for (MapChangeListener listener : mapChangeListeners)
         {
-            listener.notifyListeners(this, message);
+            listener.mapChanged(this, message);
         }
     }
 
-    public synchronized int getId() {
+    public int getId() {
         return currentId;
     }
 
     protected synchronized void increaseId()
     {
-        nextMapId++;
+        synchronized (this)
+        {
+            nextMapId++;
+        }
     }
 }
