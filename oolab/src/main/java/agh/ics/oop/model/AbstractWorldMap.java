@@ -1,6 +1,5 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.model.IncorrectPositionException;
 import agh.ics.oop.model.util.MapVisualizer;
 
 import java.util.*;
@@ -70,7 +69,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     {
         for (MapChangeListener listener : mapChangeListeners)
         {
-            listener.notifyListeners(this, message);
+            listener.mapChanged(this, message);
         }
     }
 
