@@ -15,13 +15,27 @@ import java.util.List;
 
 public class SimulationApp extends Application
 {
-    public void start(Stage primaryStage) throws IOException, IllegalArgumentException, IncorrectPositionException {
+//    public void start(Stage primaryStage) throws IOException, IllegalArgumentException, IncorrectPositionException
+//    {
+//        primaryStage.show();
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
+//        BorderPane viewRoot = loader.load();
+//        SimulationPresenter presenter = loader.getController();
+//
+//        configureStage(primaryStage, viewRoot);
+//    }
+
+    public void start(Stage primaryStage) throws IOException, IllegalArgumentException, IncorrectPositionException
+    {
+        synchronized (System.out) {
+            System.out.println("NEW THREAD");
+        }
         primaryStage.show();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
         BorderPane viewRoot = loader.load();
         SimulationPresenter presenter = loader.getController();
-
 
         configureStage(primaryStage, viewRoot);
     }

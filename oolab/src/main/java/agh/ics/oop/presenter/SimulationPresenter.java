@@ -2,6 +2,7 @@ package agh.ics.oop.presenter;
 
 import agh.ics.oop.OptionsParser;
 import agh.ics.oop.Simulation;
+import agh.ics.oop.SimulationApp;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
 import javafx.application.Platform;
@@ -14,7 +15,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.List;
 
 public class SimulationPresenter implements MapChangeListener
@@ -34,7 +37,7 @@ public class SimulationPresenter implements MapChangeListener
     @FXML
     private GridPane mapGrid = new GridPane();
 
-
+    private int clickCounter = 0;
     private Boundary currentBoundary;
     public void setWorldMap(WorldMap map)
     {
@@ -47,6 +50,17 @@ public class SimulationPresenter implements MapChangeListener
         infoLabel.setText("");
         try
         {
+                if (clickCounter > 0) {
+                    Platform.runLater(() -> {
+                        try {
+                            Stage newStage = new Stage();
+                            SimulationApp simulationApp = new SimulationApp();
+                            simulationApp.start(newStage); // Assuming `start` accepts a `Stage` argument
+                        } catch (IOException | IncorrectPositionException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                }
             GrassField map = new GrassField(10);
             this.setWorldMap(map);
             map.addMapChangeListener(this);
@@ -58,7 +72,10 @@ public class SimulationPresenter implements MapChangeListener
             Simulation simulation = new Simulation(animalPositions, OptionsParser.parse(textField.getText().split(" ")), worldMap);
             SimulationEngine simulationEngine = new SimulationEngine(List.of(simulation));
             simulationEngine.runAsync();
-
+            synchronized (this)
+            {
+                clickCounter++;
+            }
         } catch (IllegalArgumentException e)
         {
             e.printStackTrace();
