@@ -40,6 +40,11 @@ public class Simulation implements Runnable
             map.move( animals.get(ind) , direction ); // zwierze powinno sie zmodyfikowac tutaj automatycznie
             animalPositions.set(ind,animals.get(ind).getPosition());
             ind = (ind+1) % animals.size(); // wyliczanie indeksu nastepnego rozpatrywanego zwierzecia w tablicy
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }
