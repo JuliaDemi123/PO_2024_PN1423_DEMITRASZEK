@@ -45,4 +45,7 @@ public interface WorldMap extends MoveValidator {
     WorldElement objectAt(Vector2d position);
 
     int getId();
+
+    Boundary getCurrentBounds(); // w poleceniu bylo zeby tego uzyc a korzystamy z klas
+    // implementujacych interface WorldMap a nie rozszerzajacych abstrakcyjna klasa AbstractWorldMap
 }

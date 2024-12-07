@@ -22,14 +22,7 @@ public class SimulationApp extends Application
         BorderPane viewRoot = loader.load();
         SimulationPresenter presenter = loader.getController();
 
-        //
-//        List<String> inputParameters =  getParameters().getRaw();
-//        String[] params = inputParameters.toArray(new String[0]);
-//        List<MoveDirection> moveDirectionParameters = OptionsParser.parse(params);
-//        Simulation simulation = new Simulation(animalPositions,moveDirectionParameters,map);
-//        simulation.run();
 
-        //
         configureStage(primaryStage, viewRoot);
     }
 

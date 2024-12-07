@@ -27,7 +27,7 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 
     public abstract Boundary getCurrentBounds();
 
-    public synchronized String toString()
+    public String toString()
     {
         Boundary boundary = getCurrentBounds();
         return mapVisualizer.draw(boundary.lowerLeftCorner(), boundary.upperRightCorner());
