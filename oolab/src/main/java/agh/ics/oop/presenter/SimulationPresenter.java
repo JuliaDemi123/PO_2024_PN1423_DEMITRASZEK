@@ -36,8 +36,6 @@ public class SimulationPresenter implements MapChangeListener
 
 
     private Boundary currentBoundary;
-
-
     public void setWorldMap(WorldMap map)
     {
         this.worldMap = map;
