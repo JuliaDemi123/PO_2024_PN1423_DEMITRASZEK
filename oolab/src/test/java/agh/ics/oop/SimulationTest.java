@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 class SimulationTest
@@ -25,7 +26,7 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"r"}),map );
         s.run();
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.EAST);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.EAST);
     }
 
     @Test
@@ -34,7 +35,7 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"l"}),map );
         s.run();
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.WEST);
     }
 
     @Test
@@ -44,7 +45,7 @@ class SimulationTest
         s.run();
 
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(2,3));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
@@ -53,7 +54,7 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos2),OptionsParser.parse( new String[] {"f"}),map );
         s.run();
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,3));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.NORTH);
     }
 
     @Test
@@ -62,7 +63,7 @@ class SimulationTest
         Simulation s = new Simulation(List.of(pos1),OptionsParser.parse( new String[] {"b"}),map );
         s.run();
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(0,0));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.NORTH);
     }
 
 
@@ -73,7 +74,7 @@ class SimulationTest
         s.run();
 
         Assertions.assertEquals(s.getAnimalPositions().get(0),new Vector2d(1,1));
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0))).getOrientation(),MapDirection.NORTH);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(0)).get()).getOrientation(),MapDirection.NORTH);
 
     }
 
@@ -84,15 +85,15 @@ class SimulationTest
         s.run();
 
         Assertions.assertEquals(s.getAnimalPositions().get(0),pos1);
-        Assertions.assertEquals( ((Animal)(map.objectAt(s.getAnimalPositions().get(0)))).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals( ((Animal)(map.objectAt(s.getAnimalPositions().get(0))).get()).getOrientation(),MapDirection.WEST);
 
 
         Assertions.assertEquals(s.getAnimalPositions().get(1),new Vector2d(0,2) );
-        Assertions.assertEquals( ((Animal)map.objectAt(s.getAnimalPositions().get(1))).getOrientation(),MapDirection.WEST);
+        Assertions.assertEquals( ((Animal)map.objectAt(s.getAnimalPositions().get(1)).get()).getOrientation(),MapDirection.WEST);
 
 
         Assertions.assertEquals(s.getAnimalPositions().get(2),pos3);
-        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(2))).getOrientation(),MapDirection.EAST);
+        Assertions.assertEquals(((Animal)map.objectAt(s.getAnimalPositions().get(2)).get()).getOrientation(),MapDirection.EAST);
 
     }
 

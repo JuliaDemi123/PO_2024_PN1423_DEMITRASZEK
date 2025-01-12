@@ -2,10 +2,7 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.model.util.MapVisualizer;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -37,13 +34,12 @@ public class GrassField extends AbstractWorldMap
     }
 
     @Override
-    public WorldElement objectAt(Vector2d position)
+    public Optional<WorldElement> objectAt(Vector2d position)
     {
-        WorldElement elem = super.objectAt(position);
+        Optional<WorldElement> elem = super.objectAt(position);
         if( elem == null )
         {
-            if (grasses.containsKey(position)) { return grasses.get(position); }
-            return null;
+            return Optional.ofNullable(grasses.get(position));
         }
         else
         {

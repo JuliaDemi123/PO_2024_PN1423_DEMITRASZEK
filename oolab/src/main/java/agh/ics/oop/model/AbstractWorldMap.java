@@ -51,8 +51,8 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
         return animals.containsKey(position);
     } // moge wykorzystac funkcjonalnosc w grassfieldzie
 
-    public WorldElement objectAt(Vector2d position)
-    { return isOccupied(position) ? animals.get(position) : null; }
+    public Optional<WorldElement> objectAt(Vector2d position)
+    { return Optional.ofNullable(animals.get(position)); }
 
     public void move(Animal animal, MoveDirection direction)
     {
