@@ -4,6 +4,9 @@ import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
 import agh.ics.oop.model.IncorrectPositionException;
 
+import java.util.Collection;
+import java.util.List;
+
 /**
  * The interface responsible for interacting with the map of the world.
  * Assumes that Vector2d and MoveDirection classes are defined.
@@ -44,8 +47,12 @@ public interface WorldMap extends MoveValidator {
      */
     WorldElement objectAt(Vector2d position);
 
+    List<Animal> getOrderedAnimals();
+
     int getId();
 
     Boundary getCurrentBounds(); // w poleceniu bylo zeby tego uzyc a korzystamy z klas
     // implementujacych interface WorldMap a nie rozszerzajacych abstrakcyjna klasa AbstractWorldMap
+
+
 }

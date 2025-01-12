@@ -1,8 +1,11 @@
 package agh.ics.oop.model;
 
 import agh.ics.oop.model.util.MapVisualizer;
+import javafx.util.Pair;
 
+import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 {
@@ -11,6 +14,15 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     private final List<MapChangeListener> mapChangeListeners = new ArrayList<>();
     private static int nextMapId = 0;
     private final int currentId = nextMapId;
+
+    public AbstractWorldMap()
+    {
+        // dodany dodatkowy obserwator
+        MapChangeListener mapChangeListener = (worldMap, message) -> {
+            System.out.println(message);
+        };
+        addMapChangeListener(mapChangeListener);
+    }
 
     public void place(Animal animal) throws IncorrectPositionException
     {
@@ -44,10 +56,11 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
 
     public void move(Animal animal, MoveDirection direction)
     {
+        Vector2d prevPosition = animal.getPosition();
         animals.remove(animal.getPosition());
         animal.move(direction, this);
         animals.put(animal.getPosition(), animal);
-        mapChanged("An animal moved to " + animal.getPosition());
+        mapChanged( new Date() + "An animal moved to " + animal.getPosition() + " from position " + prevPosition);
     }
 
     public List<WorldElement> getElements()
@@ -80,5 +93,22 @@ public abstract class AbstractWorldMap implements MoveValidator,WorldMap
     protected synchronized void increaseId()
     {
         nextMapId++;
+    }
+
+    public List<Animal> getOrderedAnimals()
+    {
+        List<Map.Entry<Vector2d, Animal>> entryList = new ArrayList<>(animals.entrySet()); // zamienia
+        // animale na pary (Vector2d, Animal)
+
+        Comparator<Map.Entry<Vector2d, Animal>> comparator =
+                Comparator.comparing((Map.Entry<Vector2d, Animal> entry) -> entry.getKey().getX())
+                        .thenComparing(entry -> entry.getKey().getY());
+
+        List<Animal> sortedAnimals = entryList.stream()
+                .sorted(comparator)
+                .map(Map.Entry::getValue)
+                .collect(Collectors.toList());
+
+        return sortedAnimals;
     }
 }

@@ -15,6 +15,7 @@ public class GrassField extends AbstractWorldMap
 
     public GrassField(int grassCount)
     {
+        super();
         this.grassCount = grassCount;
 
         int maxWidth = (int)Math.ceil(Math.sqrt(grassCount*10));
